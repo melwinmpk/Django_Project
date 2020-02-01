@@ -1,0 +1,23 @@
+{% load static %}
+{% static "images" as baseUrl %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>
+        {% block title %}
+            {{ page_title|default:"Untitled Page" }}
+        {% endblock title %}
+    </title>
+    {% block view_css %}
+    {% endblock view_css %}
+
+</head>
+<body>
+    {% block content %}
+    {% endblock %}
+    <script src="{% static 'js/jquery-3.2.1.min.js' %}"></script>
+    {% block view_js %}
+    {% endblock view_js %}
+</body>
+</html>

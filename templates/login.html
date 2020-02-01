@@ -1,0 +1,16 @@
+1  {% extends 'base.html' %}
+2  
+3  {% block title %}{{title}}{% endblock title %}
+4  
+5  {% block content %}
+6      <h1>{{ title }}</h1>
+7   <form action="login" method="post">
+        {% csrf_token %}
+
+        <input type="text" name="username" placeholder="User Name"><br>
+
+        <input type="password" name="password" placeholder="Password"><br>
+
+        <input type="Submit" ><br>
+    </form>
+8  {% endblock content %}

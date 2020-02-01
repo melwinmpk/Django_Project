@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+    {{title}}
+{% endblock title %}
+{% block view_css %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/index.css' %}">
+{% endblock view_css %}
+{% block content %}
+    <h1>{{ title }}</h1>
+   <form action="login" method="post">
+        {% csrf_token %}
+
+        <input type="text" name="username" placeholder="User Name"><br>
+
+        <input type="password" name="password" placeholder="Password"><br>
+
+        <input type="Submit" ><br>
+    </form>
+{% endblock content %}
+{% block view_js %}
+    <script src="{% static 'js/index.js' %}"></script>
+{% endblock view_js %}
