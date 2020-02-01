@@ -1,10 +1,18 @@
-1  {% extends 'base.html' %}
-2  
-3  {% block title %}{{title}}{% endblock title %}
-4  
-5  {% block content %}
-6      <h1>{{ title }}</h1>
-7   <form action="login" method="post">
+{% extends 'base.html' %}
+
+{% block title %}{{title}}{% endblock title %}
+
+{% block view_css_tag %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/'|add:view_css %}">
+{% endblock view_css_tag %}
+
+{% block view_js_tag %}
+    <script src="{% static 'js/'|add:view_js %}"></script>
+{% endblock view_js_tag %}
+
+{% block content %}
+    <h1>{{ title }}</h1>
+    <form action="login" method="post">
         {% csrf_token %}
 
         <input type="text" name="username" placeholder="User Name"><br>
@@ -13,4 +21,8 @@
 
         <input type="Submit" ><br>
     </form>
-8  {% endblock content %}
+{% endblock content %}
+
+  {% block view_js %}
+    <script src="{% static 'js/login.js' %}"></script>
+  {% endblock view_js %}

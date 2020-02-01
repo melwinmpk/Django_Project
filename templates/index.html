@@ -3,9 +3,16 @@
 {% block title %}
     {{title}}
 {% endblock title %}
-{% block view_css %}
-    <link rel="stylesheet" type="text/css" href="{% static 'css/index.css' %}">
-{% endblock view_css %}
+
+
+{% block view_css_tag %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/'|add:view_css %}">
+{% endblock view_css_tag %}
+
+{% block view_js_tag %}
+    <script src="{% static 'js/'|add:view_js %}"></script>
+{% endblock view_js_tag %}
+
 {% block content %}
     <h1>{{ title }}</h1>
    <form action="login" method="post">
@@ -18,6 +25,3 @@
         <input type="Submit" ><br>
     </form>
 {% endblock content %}
-{% block view_js %}
-    <script src="{% static 'js/index.js' %}"></script>
-{% endblock view_js %}

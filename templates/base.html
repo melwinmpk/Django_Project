@@ -9,15 +9,15 @@
             {{ page_title|default:"Untitled Page" }}
         {% endblock title %}
     </title>
-    {% block view_css %}
-    {% endblock view_css %}
+    {% block view_css_tag %}
+    {% endblock view_css_tag %}
 
 </head>
 <body>
     {% block content %}
     {% endblock %}
     <script src="{% static 'js/jquery-3.2.1.min.js' %}"></script>
-    {% block view_js %}
-    {% endblock view_js %}
+    {% block view_js_tag %}
+    {% endblock view_js_tag %}
 </body>
 </html>

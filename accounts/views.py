@@ -11,4 +11,4 @@ def register(request):
     return render(request, 'register.html', render_data('register'))
 
 def render_data(view):
-    return {'title':view,'js':view+'.js','css':view+'.css'}
+    return {'title':view,'view_js':view+'.js','view_css':view+'.css'}
