@@ -1,10 +1,30 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+    {{title}}
+{% endblock title %}
 
-</body>
-</html>
+{% block view_css_tag %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/'|add:view_css %}">
+{% endblock view_css_tag %}
+
+{% block view_js_tag %}
+    <script src="{% static 'js/'|add:view_js %}"></script>
+{% endblock view_js_tag %}
+
+{% block content %}
+    <div id="{{title}}_div">
+        <h1>{{ title }}</h1>
+        <form class="register_form" onsubmit="return false"> <!-- action="login" -->
+            {% csrf_token %}
+            <input class="js_first_name" type="text" name="first_name" placeholder="First Name"><br>
+            <input class="js_last_name" type="text" name="last_name" placeholder="Last Name"><br>
+            <input class="js_username" type="text" name="username" placeholder="User Name"><br>
+            <input class="js_email" type="email" name="email" placeholder="Email"><br>
+            <input class="js_password" type="password" name="password" placeholder="Password"><br>
+            <input class="js_password2" type="password" name="password2" placeholder="Confirm Password"><br>
+            <button class="submit_button"  >Submit</button><br>
+            <a href="/login">login</a>
+        </form>
+    </div>
+{% endblock content %}
