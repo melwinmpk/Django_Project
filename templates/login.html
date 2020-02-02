@@ -1,6 +1,8 @@
 {% extends 'base.html' %}
-
-{% block title %}{{title}}{% endblock title %}
+{% load static %}
+{% block title %}
+    {{title}}
+{% endblock title %}
 
 {% block view_css_tag %}
     <link rel="stylesheet" type="text/css" href="{% static 'css/'|add:view_css %}">
@@ -11,18 +13,16 @@
 {% endblock view_js_tag %}
 
 {% block content %}
-    <h1>{{ title }}</h1>
-    <form action="login" method="post">
-        {% csrf_token %}
+    <div id="{{title}}_div">
+        <h1>{{ title }}</h1>
+        <form class="login_form" onsubmit="return false"> <!-- action="login" -->
+            {% csrf_token %}
 
-        <input type="text" name="username" placeholder="User Name"><br>
+            <input class="js_username" type="text" name="username" placeholder="User Name"><br>
 
-        <input type="password" name="password" placeholder="Password"><br>
+            <input class="js_password" type="password" name="password" placeholder="Password"><br>
 
-        <input type="Submit" ><br>
-    </form>
+            <button class="submit_button"  >Submit</button><br>
+        </form>
+    </div>
 {% endblock content %}
-
-  {% block view_js %}
-    <script src="{% static 'js/login.js' %}"></script>
-  {% endblock view_js %}
