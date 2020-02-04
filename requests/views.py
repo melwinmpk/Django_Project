@@ -21,7 +21,7 @@ def controllers(request):
         data         =  json.dumps(data)
         target_class = dynamic_import(mode, ack)
         controller   = target_class(data)
-        data         = getattr(controller, ack + 'Ack')()
+        data         = getattr(controller, ack + 'Ack')(request)
 
 
     return JsonResponse(json.loads(data), status=201)
