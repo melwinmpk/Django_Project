@@ -7,17 +7,12 @@ def controllers(request):
     if request.method == 'POST':
         mode     = request.POST['mode']
         ack      = request.POST['ack']
-        username = request.POST['username']
-        password = request.POST['password']
         # call respective function.
 
-        # print(mode,ack,username,password)
-        data = {
-            "mode": mode,
-            "ack":ack,
-            "username":username,
-            "password":password,
-        }
+        data = {}
+        for request_data in request.POST:
+            data[request_data] = request.POST[request_data]
+
         data         =  json.dumps(data)
         target_class = dynamic_import(mode, ack)
         controller   = target_class(data)

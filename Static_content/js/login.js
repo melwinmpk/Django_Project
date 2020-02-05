@@ -1,8 +1,7 @@
 $(document).ready(function(){
 
   // jQuery methods go here...
-  console.log("IS this working ????");
-  alert('its working !!!!!');
+
   $(".login_form").find('.submit_button').unbind().bind("click",this,function(e){
     e.preventDefault();
     var username = $(this).closest('form').find('.js_username').val();

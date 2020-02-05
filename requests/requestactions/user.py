@@ -1,11 +1,12 @@
 from  django.contrib.auth.models import User,auth
+from django.shortcuts import render, redirect
 from django.contrib import messages
 import json
 
 class user:
     username = ''
     password = ''
-    emailid  = ''
+    email  = ''
     first_name = ''
     last_name = ''
 
@@ -17,8 +18,8 @@ class user:
             self.username = data['username']
         if "password" in data:
             self.password = data['password']
-        if "emailid" in data:
-            self.emailid = data['emailid']
+        if "email" in data:
+            self.email = data['email']
         if "first_name" in data:
             self.first_name = data['first_name']
         if "last_name" in data:
@@ -30,23 +31,23 @@ class user:
 
         user = auth.authenticate(username=self.username, password=self.password)
         if user is not None:
-            auth.login(user)
+            auth.login(request,user)
+            # redirect('home')
             return json.dumps({'status':'success'})
+            # return redirect('/home')
         else:
             messages.info(request, 'Invalid Credentials')
-            return json.dumps({'status':'fail','error':'Invalid Credentials'})
+            return json.dumps({'status':'Fail','message':'Invalid Credentials'})
 
 
-    def registerAck(self):
+    def registerAck(self,request):
         if User.objects.filter(username=self.username).exists():
-            messages.info(request, 'Username Taken')
-            return redirect('register')
-        elif User.objects.filter(email=self.emailid).exists():
-            messages.info(request, 'email taken')
-            return redirect('register')
+            return json.dumps({'status':'Fail','message':'Username Already exist try somthing else.'})
+        elif User.objects.filter(email=self.email).exists():
+            return json.dumps({'status':'Fail','message':'EmailId Already exist try somthing else.'})
         else:
-            user = User.objects.create_user(username=self.username, password=password1, email=self.emailid, first_name=self.first_name,
+            user = User.objects.create_user(username=self.username, password=self.password, email=self.email, first_name=self.first_name,
                                             last_name=self.last_name)
             user.save();
-            messages.info(request, 'UserId Created')
-            return redirect('login')
+            redirect('/home')
+            return json.dumps({'status':'success','message':'account created'})
