@@ -4,7 +4,6 @@
     {{title}}
 {% endblock title %}
 
-
 {% block view_css_tag %}
     <link rel="stylesheet" type="text/css" href="{% static 'css/'|add:view_css %}">
 {% endblock view_css_tag %}
@@ -14,14 +13,19 @@
 {% endblock view_js_tag %}
 
 {% block content %}
-    <h1>{{ title }}</h1>
-   <form action="login" method="post">
-        {% csrf_token %}
-
-        <input type="text" name="username" placeholder="User Name"><br>
-
-        <input type="password" name="password" placeholder="Password"><br>
-
-        <input type="Submit" ><br>
-    </form>
+    <div id="{{title}}_div">
+        <h1>{{ title }}</h1>
+        {% if user.is_authenticated %}
+            <li>Hello,{{user.first_name}}</li>
+            {% if user.is_staff%}
+                <li>addQuestion</li>
+                <li>Create Subject</li>
+            {% endif %}
+                <li>Take Test</li>
+            <li><a href="/logout">Logout</a></li>
+        {% else %}
+            <li><a href="/register">Register</a></li>
+            <li><a href="/login">Login</a></li>
+        {% endif %}
+    </div>
 {% endblock content %}

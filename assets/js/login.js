@@ -21,6 +21,15 @@ $(document).ready(function(){
         success: function (data) {
 //          alert(data);
           console.log(data);
+          if(data.status == "success")
+          {
+             window.location.replace("/");
+          }
+          else
+          {
+            alert(data.message);
+          }
+
         }
     });
   });

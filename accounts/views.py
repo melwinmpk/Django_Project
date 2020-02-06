@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from  django.contrib.auth.models import User,auth
 from django.http import JsonResponse
 
 # Create your views here.
@@ -9,6 +10,9 @@ def login(request):
     data = {}
     # return JsonResponse(data)
     return render(request, 'login.html', render_data('login'))
+def logout(request):
+    auth.logout(request)
+    return render(request, 'index.html', render_data('index'))
 
 def register(request):
     return render(request, 'register.html', render_data('register'))

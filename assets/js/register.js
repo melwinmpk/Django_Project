@@ -30,8 +30,14 @@ $(document).ready(function(){
           csrfmiddlewaretoken:$(dom).find(".register_form").find('input[name=csrfmiddlewaretoken]').val()
         },
         success: function (data) {
-//          alert(data);
-          console.log(data);
+          if(data.status == "success")
+          {
+             window.location.replace("/login");
+          }
+          else
+          {
+            alert(data.message);
+          }
         }
     });
   });
