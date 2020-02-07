@@ -2,12 +2,17 @@ from django.db import models
 
 # Create your models here.
 class Questions(models.Model):
+    Subjectid  = models.CharField(max_length=100,default=1)
+    Question   = models.CharField(max_length=320,blank=True, null=True)
+    Options    = models.CharField(max_length=1000,blank=True, null=True)
+    QuesType   = models.IntegerField(blank=False, null=False,default=1)
+    Ans        = models.IntegerField(blank=False, null=False)
 
-    Subject = models.CharField(max_length=100)
-    Ques    = models.CharField(max_length=320)
-    Op_1    = models.CharField(max_length=100)
-    Op_2    = models.CharField(max_length=100)
-    Op_3    = models.CharField(max_length=100)
-    Op_4    = models.CharField(max_length=100)
-    Ans     = models.IntegerField()
+class QuestionDefinition(models.Model):
+    QuestionTypeId = models.IntegerField(blank=False, null=False,unique=True)
+    QuestionType   = models.CharField(max_length=100,blank=True, null=True)
+
+class Subject(models.Model):
+    SubjectName = models.CharField(max_length=100,blank=True, null=True)
+    SubjectId   = models.IntegerField(blank=False, null=False,unique=True)
 
