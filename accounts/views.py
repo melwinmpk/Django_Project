@@ -17,5 +17,8 @@ def logout(request):
 def register(request):
     return render(request, 'register.html', render_data('register'))
 
-def render_data(view):
-    return {'title':view,'view_js':view+'.js','view_css':view+'.css'}
+def render_data(view,data = None):
+    if data == None:
+        return {'title':view,'view_js':view+'.js','view_css':view+'.css'}
+    else:
+        return {'title':view,'view_js':view+'.js','view_css':view+'.css','data':data}

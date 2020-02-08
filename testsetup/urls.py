@@ -19,7 +19,8 @@ from . import views
 
 urlpatterns = [
     path('createtest',views.createtest, name='createtest'), # HomeView views.index
-    path('create_subject',views.createsubject, name='createsubject')
+    path('create_subject',views.createsubject, name='createsubject'),
+    path('add_question',views.addQuestion, name='addQuestion')
 
     # path('login',views.login, name='login'),
     # path('register',views.register, name='register')

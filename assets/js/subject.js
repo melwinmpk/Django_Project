@@ -17,7 +17,7 @@ $(document).ready(function(){
           if(data.status == "success")
           {
                alert("Subject Got Saved !");
-               window.location.replace("/");
+//               window.location.replace("/");
           }
           else
           {

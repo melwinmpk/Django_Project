@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+    {{title}}
+{% endblock title %}
+
+{% block view_css_tag %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/'|add:view_css %}">
+{% endblock view_css_tag %}
+
+{% block view_js_tag %}
+    <script src="{% static 'js/'|add:view_js %}"></script>
+{% endblock view_js_tag %}
+
+{% block content %}
+    <div id="{{title}}_div">
+        <h1>{{ title }}</h1>
+        <form class="questionadd_form" onsubmit="return false"> <!-- action="login" -->
+            {% csrf_token %}
+            {% if data.subjects is mapping %}
+                print "Oh Yes!!"
+            {% else %}
+                print "Oh No!!!"
+            {{data.subjects}}
+            {% endif %}
+            {% for value in data.subjects %}
+                {{value}}
+            {% endfor %}
+            <input class="js_subjectname" type="text" name="subjectname" placeholder="Subject Name"><br>
+            <button class="savesubject_button" >Save</button><br>
+            <button class="js_back">Back</button>
+        </form>
+    </div>
+{% endblock content %}
