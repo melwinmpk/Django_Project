@@ -12,7 +12,6 @@ class user:
 
     def __init__(self,data):
         data = json.loads(data) # type is dict
-        print(type(data))
         # elem in LIST
         if "username" in data:
             self.username = data['username']

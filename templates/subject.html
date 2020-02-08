@@ -15,6 +15,10 @@
 {% block content %}
     <div id="{{title}}_div">
         <h1>{{ title }}</h1>
-        <p>Adding of Subjects !!!!!!! </p>
+        <form class="subject_form" onsubmit="return false"> <!-- action="login" -->
+            {% csrf_token %}
+            <input class="js_subjectname" type="text" name="subjectname" placeholder="Subject Name"><br>
+            <button class="savesubject_button" >Save</button><br>
+        </form>
     </div>
 {% endblock content %}

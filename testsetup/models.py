@@ -9,10 +9,10 @@ class Questions(models.Model):
     Ans        = models.IntegerField(blank=False, null=False)
 
 class QuestionDefinition(models.Model):
-    QuestionTypeId = models.IntegerField(blank=False, null=False,unique=True)
+    # QuestionTypeId = models.IntegerField(blank=False, null=False,unique=True)
     QuestionType   = models.CharField(max_length=100,blank=True, null=True)
 
-class Subject(models.Model):
+class SubjectDefinition(models.Model):
     SubjectName = models.CharField(max_length=100,blank=True, null=True)
-    SubjectId   = models.IntegerField(blank=False, null=False,unique=True)
+    # SubjectId   = models.IntegerField(blank=False, null=False,unique=True)
 
