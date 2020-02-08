@@ -7,7 +7,6 @@ $(document).ready(function(){
         type    : "POST",
         url     : '/ajax/request',
         dataType: 'json',
-//        async: true,
         data: {
           'mode'             :'testsetup',
           'ack'              :'savesubject',
@@ -17,14 +16,19 @@ $(document).ready(function(){
         success: function (data) {
           if(data.status == "success")
           {
-//             window.location.replace("/login");
+               alert("Subject Got Saved !");
+               window.location.replace("/");
           }
           else
           {
-//            alert(data.message);
+            alert(data);
           }
         }
     });
+  });
+  $(dom).find('.subject_form').find('.js_back').unbind().bind('click',this,function(e){
+    e.preventDefault();
+    window.location.replace("/");
   });
 
   });

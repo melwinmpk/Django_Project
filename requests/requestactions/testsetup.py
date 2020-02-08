@@ -1,6 +1,7 @@
 from  django.contrib.auth.models import User,auth
 from django.shortcuts import render, redirect
 from django.contrib import messages
+from testsetup.models import SubjectDefinition
 import json
 
 
@@ -15,8 +16,10 @@ class testsetup:
             self.subjectname = data['subjectname']
 
     # @userlogincheck
-    def savesubjectAck(self,data):
+    def savesubjectAck(self,request):
         self.userlogincheck()
+        subjaectobj = SubjectDefinition(SubjectName = self.subjectname)
+        subjaectobj.save()
         return json.dumps({'status':'success'})
 
 
