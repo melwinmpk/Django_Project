@@ -17,15 +17,58 @@
         <h1>{{ title }}</h1>
         <form class="questionadd_form" onsubmit="return false"> <!-- action="login" -->
             {% csrf_token %}
-            {% if data.subjects is mapping %}
-                print "Oh Yes!!"
-            {% else %}
-                print "Oh No!!!"
-            {{data.subjects}}
-            {% endif %}
-            {% for value in data.subjects %}
-                {{value}}
-            {% endfor %}
+
+            <div>
+                <span>Question Type:</span>
+                <select id="selectquestionType" >
+                  {% for value in data.questionType %}
+                    <option value="{{value.id}}">{{value.QuestionType}}</option>
+                  {% endfor %}
+                </select>
+            </div>
+            <div class="tab-content">
+              {% for value in data.questionType %}
+                <div role="tabpane" {{value.QuestionType}} data-Qtype="{{value.QuestionType}}" data-Qtypeid="{{value.id}}"
+                 {% if value.id == 1%}
+                    class="tab-pane {{value.id}} fade active in"
+                 {% else %}
+                    class="tab-pane {{value.id}} fade"
+                 {%endif %}
+                 id="tab-pane">
+                    <div>
+                        <span>Subject:</span>
+                        <select id="selectSubject" class="form-control" name="floorplan">
+                          {% for value1 in data.subjects %}
+                            <option value="{{value.id}}">{{value1.SubjectName}}</option>
+                          {% endfor %}
+                        </select>
+                    </div>
+                    <div>
+                        <span>Question:</span>
+                        <textarea class="questiontext" rows="4" cols="50"></textarea>
+                    </div>
+                    {% if value.id == 1 %}
+                        <div class="mcqoptions">
+                            <div class="optiondiv">
+                                <span>Option 1:</span>
+                                <input class="js_option" type="text" placeholder="option 1">
+<!--                                <button>Cancel</button>-->
+                            </div>
+                            <div class="optiondiv">
+                                <span>Option 2:</span>
+                                <input class="js_option" type="text" placeholder="option 2">
+<!--                                <button>Cancel</button>-->
+                            </div>
+                        </div>
+                        <div>
+                            <button class="js_moreoptions">Add More Options</button>
+                        </div>
+                    {% elif value.id == 2 %}
+                    {% endif %}
+                </div>
+              {% endfor %}
+            </div>
+
             <input class="js_subjectname" type="text" name="subjectname" placeholder="Subject Name"><br>
             <button class="savesubject_button" >Save</button><br>
             <button class="js_back">Back</button>

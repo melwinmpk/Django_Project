@@ -15,11 +15,5 @@ def addQuestion(request):
     questionTypeobj = QuestionDefinition.objects.all()
     questionType = {}
     subjects = {}
-    for entry in questionTypeobj.values():
-        questionType[entry['id']] = entry['QuestionType']
-    for entry in subjectsobj.values():
-        subjects[entry['id']] = entry['SubjectName']
-    # print(list_result)
-        # list_result['subjects'][entry['id']] = entry['SubjectName']
 
-    return render(request, 'questionAdd.html', render_data('questionAdd',{'questionType':questionType,'subjects':subjects}))
+    return render(request, 'questionAdd.html', render_data('questionAdd',{'questionType':questionTypeobj,'subjects':subjectsobj}))
