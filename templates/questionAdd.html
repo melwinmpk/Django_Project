@@ -22,7 +22,7 @@
                 <span>Question Type:</span>
                 <select id="selectquestionType" >
                   {% for value in data.questionType %}
-                    <option value="{{value.id}}">{{value.QuestionType}}</option>
+                    <option value="{{value.id}}" class="selected">{{value.QuestionType}}</option>
                   {% endfor %}
                 </select>
             </div>
@@ -69,8 +69,7 @@
               {% endfor %}
             </div>
 
-            <input class="js_subjectname" type="text" name="subjectname" placeholder="Subject Name"><br>
-            <button class="savesubject_button" >Save</button><br>
+            <button class="js_savequestion_button" >Save</button><br>
             <button class="js_back">Back</button>
         </form>
     </div>

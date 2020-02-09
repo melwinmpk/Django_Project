@@ -17,5 +17,65 @@
             $(this).closest('.optiondiv').remove();
         });
       });
+
+      $(dom).find('.js_savequestion_button').unbind().bind('click',this,function(e){
+        e.preventDefault();
+        var questiontype = $(dom).find('#selectquestionType').val();
+        var subject      = $(dom).find('#selectSubject').val();
+        var Question     = $(dom).find('.questiontext').val();
+        var optons = [];
+        $(dom).find('.mcqoptions .optiondiv').each(function( index ) {
+          optons[index] = $( this ).find('.js_option').val();
+        });
+
+        $.ajax({
+                type    : "POST",
+                url     : '/ajax/request',
+                dataType: 'json',
+                data: {
+                  'mode'             :'testsetup',
+                  'ack'              :'savequestion',
+                  'subjectname'      : subject,
+                  'questiontype'     : questiontype,
+                  'Question'         : Question,
+                  'options'          : optons,
+                  csrfmiddlewaretoken:$(dom).find('input[name=csrfmiddlewaretoken]').val()
+                },
+                success: function (data) {
+                  if(data.status == "success")
+                  {
+                       alert("Subject Got Saved !");
+                       window.location.replace("/");
+                  }
+                  else
+                  {
+                    alert(data);
+                  }
+                }
+            });
+      });
+
+      /*$.ajax({
+        type    : "POST",
+        url     : '/ajax/request',
+        dataType: 'json',
+        data: {
+          'mode'             :'testsetup',
+          'ack'              :'savesubject',
+          'subjectname'      :subjectname,
+          csrfmiddlewaretoken:$(dom).find(".subject_form").find('input[name=csrfmiddlewaretoken]').val()
+        },
+        success: function (data) {
+          if(data.status == "success")
+          {
+               alert("Subject Got Saved !");
+               window.location.replace("/");
+          }
+          else
+          {
+            alert(data);
+          }
+        }
+    });*/
 //      selectSubject js_moreoptions
   });
