@@ -28,6 +28,8 @@ class testsetup:
                     self.options = data['options']
         if "Question" in data:
             self.Question = data['Question']
+        if "Ans" in data:
+            self.Ans = int(data['Ans'])
 
 
 
