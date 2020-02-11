@@ -23,11 +23,11 @@
         var questiontype = $(dom).find('#selectquestionType').val();
         var subject      = $(dom).find('#selectSubject').val();
         var Question     = $(dom).find('.questiontext').val();
-        var optons = [];
+        var options = [];
         $(dom).find('.mcqoptions .optiondiv').each(function( index ) {
-          optons[index] = $( this ).find('.js_option').val();
+          options[index] = $( this ).find('.js_option').val();
         });
-
+        console.log(options);
         $.ajax({
                 type    : "POST",
                 url     : '/ajax/request',
@@ -35,17 +35,17 @@
                 data: {
                   'mode'             :'testsetup',
                   'ack'              :'savequestion',
-                  'subjectname'      : subject,
+                  'subjectid'        : subject,
                   'questiontype'     : questiontype,
                   'Question'         : Question,
-                  'options'          : optons,
+                  'options'          : JSON.stringify(options),
                   csrfmiddlewaretoken:$(dom).find('input[name=csrfmiddlewaretoken]').val()
                 },
                 success: function (data) {
                   if(data.status == "success")
                   {
-                       alert("Subject Got Saved !");
-                       window.location.replace("/");
+                       alert("Question Got Saved !");
+//                       window.location.replace("/");
                   }
                   else
                   {

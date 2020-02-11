@@ -14,7 +14,7 @@ def controllers(request):
             data[request_data] = request.POST[request_data]
 
         data         =  json.dumps(data)
-        # print("data",data)
+        print("data",data)
         target_class = dynamic_import(mode, ack)
         controller   = target_class(data)
         data         = getattr(controller, ack + 'Ack')(request)

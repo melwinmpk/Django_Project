@@ -4,7 +4,7 @@ from django.db import models
 class Questions(models.Model):
     Subjectid  = models.CharField(max_length=100,default=1)
     Question   = models.CharField(max_length=320,blank=True, null=True)
-    Options    = models.BinaryField(blank=True, null=True)
+    Options    = models.TextField(blank=True, null=True)
     QuesType   = models.IntegerField(blank=False, null=False,default=1)
     Ans        = models.IntegerField(blank=False, null=False)
 
