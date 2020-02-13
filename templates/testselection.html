@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+    {{title}}
+{% endblock title %}
+
+{% block view_css_tag %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/'|add:view_css %}">
+{% endblock view_css_tag %}
+
+{% block view_js_tag %}
+    <script src="{% static 'js/'|add:view_js %}"></script>
+{% endblock view_js_tag %}
+
+{% block content %}
+    <div id="{{title}}_div">
+        {% csrf_token %}
+        <h1>{{ title }}</h1>
+        <h4>Select the subjects which you wanted in the test.</h4>
+        <ul class="subject_select">
+            {% for value1 in data.subjects %}
+                <li>
+                    <div class="subjects">
+                        <span>{{value1.SubjectName}} :</span>
+                        <input type="checkbox" name="vehicle1" value="{{value1.id}}" data-subname = "{{value1.SubjectName}}">
+                    </div>
+                </li>
+            {% endfor %}
+        </ul>
+        <div>
+            <span>Enter the No. of questions you wanted in the Test</span>
+            <input type="text" placeholder="Max Limit ">
+        </div>
+        <button class="js_taketest">Take Test</button>
+    </div>
+{% endblock content %}

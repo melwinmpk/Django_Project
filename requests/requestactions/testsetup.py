@@ -53,6 +53,10 @@ class testsetup:
         questionobj.save()
         return json.dumps({'status':'success'})
 
+    def taketestAck(self,request):
+        return json.dumps({'status': 'success'})
+
+
 
 
 

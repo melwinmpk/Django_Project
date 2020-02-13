@@ -64,27 +64,4 @@
             });
       });
 
-      /*$.ajax({
-        type    : "POST",
-        url     : '/ajax/request',
-        dataType: 'json',
-        data: {
-          'mode'             :'testsetup',
-          'ack'              :'savesubject',
-          'subjectname'      :subjectname,
-          csrfmiddlewaretoken:$(dom).find(".subject_form").find('input[name=csrfmiddlewaretoken]').val()
-        },
-        success: function (data) {
-          if(data.status == "success")
-          {
-               alert("Subject Got Saved !");
-               window.location.replace("/");
-          }
-          else
-          {
-            alert(data);
-          }
-        }
-    });*/
-//      selectSubject js_moreoptions
   });

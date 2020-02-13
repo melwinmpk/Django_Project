@@ -23,11 +23,19 @@
         var questiontype = $(dom).find('#selectquestionType').val();
         var subject      = $(dom).find('#selectSubject').val();
         var Question     = $(dom).find('.questiontext').val();
-        var optons = [];
-        $(dom).find('.mcqoptions .optiondiv').each(function( index ) {
-          optons[index] = $( this ).find('.js_option').val();
-        });
+        var Ans          = parseInt($(dom).find('.js_ans').val());
 
+        if(Ans > $(dom).find('.mcqoptions .optiondiv').length && Ans <= 0)
+        {
+            alert('enter a valid option a Answer')
+            return;
+        }
+
+        var options = [];
+        $(dom).find('.mcqoptions .optiondiv').each(function( index ) {
+          options[index] = $( this ).find('.js_option').val();
+        });
+        console.log(options);
         $.ajax({
                 type    : "POST",
                 url     : '/ajax/request',
@@ -35,17 +43,18 @@
                 data: {
                   'mode'             :'testsetup',
                   'ack'              :'savequestion',
-                  'subjectname'      : subject,
+                  'subjectid'        : subject,
                   'questiontype'     : questiontype,
                   'Question'         : Question,
-                  'options'          : JSON.stringify(optons),
+                  'options'          : JSON.stringify(options),
+                  'Ans'              : Ans,
                   csrfmiddlewaretoken:$(dom).find('input[name=csrfmiddlewaretoken]').val()
                 },
                 success: function (data) {
                   if(data.status == "success")
                   {
-                       alert("Subject Got Saved !");
-                       window.location.replace("/");
+                       alert("Question Got Saved !");
+//                       window.location.replace("/");
                   }
                   else
                   {

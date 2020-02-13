@@ -8,6 +8,8 @@ class Questions(models.Model):
     QuesType   = models.IntegerField(blank=False, null=False,default=1)
     Ans        = models.IntegerField(blank=False, null=False)
 
+
+
 class QuestionDefinition(models.Model):
     # QuestionTypeId = models.IntegerField(blank=False, null=False,unique=True)
     QuestionType   = models.CharField(max_length=100,blank=True, null=True)

@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from accounts.views import render_data
 from django.http import JsonResponse
-from testsetup.models import SubjectDefinition,QuestionDefinition
+from testsetup.models import SubjectDefinition,QuestionDefinition,Questions
 
 # Create your views here.
 def createtest(request):
@@ -13,7 +13,9 @@ def createsubject(request):
 def addQuestion(request):
     subjectsobj     = SubjectDefinition.objects.all()
     questionTypeobj = QuestionDefinition.objects.all()
-    questionType = {}
-    subjects = {}
-
     return render(request, 'questionAdd.html', render_data('questionAdd',{'questionType':questionTypeobj,'subjects':subjectsobj}))
+
+def testselection(request):
+    subjectsobj   = SubjectDefinition.objects.all()
+
+    return render(request, 'testselection.html',render_data('testselection',{'subjects':subjectsobj}))
