@@ -57,23 +57,44 @@ class testsetup:
 
     def taketestAck(self,request):
         self.userlogincheck()
+        subject_question_list = {}
         for subjectid in json.loads(self.subjectid):
-            # print("------------------Start---------------------")
-            # print(subjectid)
             Subject_questionid_list = list(Questions.objects.filter(Subjectid=subjectid).values_list('id'))
-            subjectIds = {}
-            i=0
-            while True:
-               index = random.randint(0, len(Subject_questionid_list))
-               if index not in subjectIds:
-                   subjectIds[i] = index
-                   i+=1
-               if i >= 5 or (len(Subject_questionid_list) < 5 and i >= (len(Subject_questionid_list)-1))  :
-                   break
-            print(subjectIds)
-            # print("------------------End---------------------")
-        return json.dumps({'status': 'success'})
 
+            if len(Subject_questionid_list) > 0 :
+                randomIds = self.randomgenerator(len(Subject_questionid_list) - 1)
+                questionIds = {}
+                i = 0
+                for index in randomIds:
+                    print(index)
+                    questionIds[i] = Subject_questionid_list[index]
+                    i+=1
+                subject_question_list[subjectid] = questionIds
+
+        # return render(request, 'index.html', self.render_data('index',{'data': subject_question_list}))
+
+        return json.dumps({'status': 'success','data':subject_question_list})
+
+    def randomgenerator(self,Subject_question_len):
+        subjectIds = []
+        i = 0
+        # Subject_question_len = Subject_question_len1
+        print(Subject_question_len)
+        while True:
+            index = random.randint(0, Subject_question_len)
+            if index not in subjectIds:
+                subjectIds.append(index)
+                i += 1
+            if i >= 5 or (Subject_question_len < 5 and i >= (Subject_question_len)):
+                break
+
+        return subjectIds
+
+    def render_data(self,view, data=None):
+        if data == None:
+            return {'title': view, 'view_js': view + '.js', 'view_css': view + '.css'}
+        else:
+            return {'title': view, 'view_js': view + '.js', 'view_css': view + '.css', 'data': data}
 
 
 
