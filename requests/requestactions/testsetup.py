@@ -3,6 +3,7 @@ from django.shortcuts import render, redirect
 from django.contrib import messages
 from testsetup.models import SubjectDefinition,Questions
 import json
+import random
 import base64
 
 
@@ -33,6 +34,7 @@ class testsetup:
 
 
 
+
     # @userlogincheck
     def savesubjectAck(self,request):
         if self.subjectname != None and self.subjectname != '':
@@ -54,6 +56,22 @@ class testsetup:
         return json.dumps({'status':'success'})
 
     def taketestAck(self,request):
+        self.userlogincheck()
+        for subjectid in json.loads(self.subjectid):
+            # print("------------------Start---------------------")
+            # print(subjectid)
+            Subject_questionid_list = list(Questions.objects.filter(Subjectid=subjectid).values_list('id'))
+            subjectIds = {}
+            i=0
+            while True:
+               index = random.randint(0, len(Subject_questionid_list))
+               if index not in subjectIds:
+                   subjectIds[i] = index
+                   i+=1
+               if i >= 5 or (len(Subject_questionid_list) < 5 and i >= (len(Subject_questionid_list)-1))  :
+                   break
+            print(subjectIds)
+            # print("------------------End---------------------")
         return json.dumps({'status': 'success'})
 
 

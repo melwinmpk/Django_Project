@@ -17,7 +17,7 @@ $(document).ready(function(){
             data: {
               'mode'             :'testsetup',
               'ack'              :'taketest',
-              'subjectids'       :JSON.stringify(subjects),
+              'subjectid'        :JSON.stringify(subjects),
               csrfmiddlewaretoken:$(dom).find('input[name=csrfmiddlewaretoken]').val()
             },
             success: function (data) {
