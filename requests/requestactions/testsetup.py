@@ -83,7 +83,6 @@ class testsetup:
         if fromAjaxcall:
             return json.dumps({'status': 'success','data':subject_question_list})
         else:
-            print(subject_question_list)
             return subject_question_list
 
     def randomgenerator(self,Subject_question_len):
@@ -100,6 +99,22 @@ class testsetup:
                 break
 
         return subjectIds
+
+    def getquestiondataAck(self,request,questionid = None):
+        self.userlogincheck()
+
+        if questionid == None:
+            fromAjaxcall = True
+        else:
+            fromAjaxcall = False
+
+        questiondata =  Questions.objects.filter(id=questionid)
+        result = questiondata.values()  # return ValuesQuerySet object
+        list_result = [entry for entry in result][0]
+        if fromAjaxcall:
+            return json.dumps({'status': 'success','data':list_result})
+        else:
+            return list_result
 
     def render_data(self,view, data=None):
         if data == None:

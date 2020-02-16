@@ -29,4 +29,16 @@ def taketest(request):
     questionobj = testsetup()
     data = questionobj.taketestAck(request,objsubjectids)
 
-    return render(request,'taketest.html',render_data('taketest',{'subjectids':request.GET['subjectids'],'QuestionIds':data}))
+    for subject in data:
+        for questionid in data[subject]:
+            print("questionid ->>>>>>>>>>>>>>")
+            print(questionid)
+            print(data)
+            questionid_data = questionobj.getquestiondataAck(request,questionid)
+            questionid_data['Options'] = ast.literal_eval(questionid_data['Options'])
+            questionid_data['Options'] = [n.strip() for n in questionid_data['Options']]  # removes extra spaces
+            questionid_data['Options'] = [i for i in questionid_data['Options']]
+            break
+        break
+
+    return render(request,'taketest.html',render_data('taketest',{'subjectids':request.GET['subjectids'],'QuestionIds':data,'questiondata':questionid_data}))

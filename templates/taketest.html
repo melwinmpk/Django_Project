@@ -13,16 +13,31 @@
 {% endblock view_js_tag %}
 
 {% block content %}
-    <div id="{{title}}_div" data-subjectIds = "{{data.subjectids}}" data-questionIds = "{{data.QuestionIds}}">
+    <div id="{{title}}_div" data-subjectIds = "{{data.subjectids}}" data-questionIds = "{{data.QuestionIds}}" data-questiondata = "{{data.questiondata}}">
         <h1>{{ title }}</h1>
         {% if user.is_authenticated %}
             <li>Hello,{{user.first_name}}</li>
-            {% if user.is_staff%}
-                <li><a href="/testsetup/add_question">addQuestion</a></li>
-                <li><a href="/testsetup/create_subject">Create Subject</a></li>
-            {% endif %}
-                <li><a href="/testsetup/testselection">Take Test</a></li>
-                <li><a href="/logout">Logout</a></li>
+            <div class="QuestionOuterDiv">
+                <div>
+                    <span>Question Type:<span>{{data.questiondata.QuesType}}</span></span>
+                    <span>Subject:<span>{{data.questiondata.Subjectid}}</span></span>
+                </div>
+                <div class = "Question">
+                    {{data.questiondata.Question}}
+                </div>
+                {{data.questiondata.Options}}
+                <div class = "OptionsOuterDiv">
+                        {% for option in data.questiondata.Options %}
+                            <div class="option">
+                                <input type="radio" name="option_radio" value="{{option}}" >
+                                <span>{{option}}</span>
+                            </div>
+                        {% endfor %}
+                </div>
+                <div>
+                    <button class="js-checkanswer">Save</button>
+                </div>
+            </div>
         {% endif %}
     </div>
 {% endblock content %}
