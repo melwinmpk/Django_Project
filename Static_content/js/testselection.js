@@ -10,7 +10,8 @@ $(document).ready(function(){
                 subjects[i++] = $(this).find('input').val();
             }
         });
-        $.ajax({
+        window.location.replace("/testsetup/taketest?subjectids="+JSON.stringify(subjects));
+        /*$.ajax({
             type    : "POST",
             url     : '/ajax/request',
             dataType: 'json',
@@ -30,7 +31,7 @@ $(document).ready(function(){
                 alert(data);
               }
             }
-        });
+        });*/
 
         console.log(subjects);
     });

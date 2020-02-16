@@ -16,7 +16,9 @@ class testsetup:
     subjectid    = 1
     def userlogincheck(self):
         print("userlogin check calling respective function")
-    def __init__(self,data):
+    def __init__(self,data=None):
+        if data == None:
+            return
         data = json.loads(data)
         if "subjectname" in data:
             self.subjectname = data['subjectname']
@@ -55,25 +57,34 @@ class testsetup:
         questionobj.save()
         return json.dumps({'status':'success'})
 
-    def taketestAck(self,request):
+    def taketestAck(self,request,data=None):
         self.userlogincheck()
         subject_question_list = {}
-        for subjectid in json.loads(self.subjectid):
+        subjectid_data = {}
+        fromAjaxcall = True
+        if data == None:
+            subjectid_data = json.loads(self.subjectid)
+        else:
+            fromAjaxcall = False
+            subjectid_data = data['subjectids']
+
+        for subjectid in subjectid_data:
             Subject_questionid_list = list(Questions.objects.filter(Subjectid=subjectid).values_list('id'))
 
             if len(Subject_questionid_list) > 0 :
                 randomIds = self.randomgenerator(len(Subject_questionid_list) - 1)
-                questionIds = {}
+                questionIds = []
                 i = 0
                 for index in randomIds:
                     print(index)
-                    questionIds[i] = Subject_questionid_list[index]
+                    questionIds.append(Subject_questionid_list[index][0])
                     i+=1
-                subject_question_list[subjectid] = questionIds
-
-        # return render(request, 'index.html', self.render_data('index',{'data': subject_question_list}))
-
-        return json.dumps({'status': 'success','data':subject_question_list})
+                subject_question_list[str(subjectid)] = questionIds
+        if fromAjaxcall:
+            return json.dumps({'status': 'success','data':subject_question_list})
+        else:
+            print(subject_question_list)
+            return subject_question_list
 
     def randomgenerator(self,Subject_question_len):
         subjectIds = []
