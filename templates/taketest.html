@@ -15,9 +15,10 @@
 {% block content %}
     <div id="{{title}}_div" data-subjectIds = "{{data.subjectids}}" data-questionIds = "{{data.QuestionIds}}" data-questiondata = "{{data.questiondata}}">
         <h1>{{ title }}</h1>
+        {% csrf_token %}
         {% if user.is_authenticated %}
             <li>Hello,{{user.first_name}}</li>
-            <div class="QuestionOuterDiv">
+            <div class="QuestionOuterDiv" data-questionId="{{data.questiondata.id}}">
                 <div>
                     <span>Question Type:<span>{{data.questiondata.QuesType}}</span></span>
                     <span>Subject:<span>{{data.questiondata.Subjectid}}</span></span>

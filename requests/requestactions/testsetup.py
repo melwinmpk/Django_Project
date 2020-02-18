@@ -14,6 +14,7 @@ class testsetup:
     options      = {}
     Ans          = 1
     subjectid    = 1
+    questionid   = 0
     def userlogincheck(self):
         print("userlogin check calling respective function")
     def __init__(self,data=None):
@@ -33,6 +34,8 @@ class testsetup:
             self.Question = data['Question']
         if "Ans" in data:
             self.Ans = int(data['Ans'])
+        if "questionid" in data:
+            self.questionid = data['questionid']
 
 
 
@@ -104,6 +107,7 @@ class testsetup:
         self.userlogincheck()
 
         if questionid == None:
+            questionid = self.questionid
             fromAjaxcall = True
         else:
             fromAjaxcall = False
@@ -116,6 +120,10 @@ class testsetup:
         else:
             return list_result
 
+    def checkanswerAck(self,request):
+        self.userlogincheck()
+        question_ans = Questions.objects.filter(id=self.questionid).values_list('Ans')
+        return json.dumps({'status': 'success', 'data': {'questionid':self.questionid,"Ans":list(question_ans)[0][0]}})
     def render_data(self,view, data=None):
         if data == None:
             return {'title': view, 'view_js': view + '.js', 'view_css': view + '.css'}
