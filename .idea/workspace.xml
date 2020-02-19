@@ -4,7 +4,7 @@
     <list default="true" id="0de834da-5e0f-4194-ba1b-1cfedf38b1d8" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/Static_content/js/taketest.js" beforeDir="false" afterPath="$PROJECT_DIR$/Static_content/js/taketest.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/requests/requestactions/testsetup.py" beforeDir="false" afterPath="$PROJECT_DIR$/requests/requestactions/testsetup.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/taketest.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/taketest.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testsetup/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/testsetup/views.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -17,10 +17,22 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/testsetup/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="127">
-              <caret line="32" column="39" selection-start-line="32" selection-start-column="39" selection-end-line="32" selection-end-column="39" />
+            <state relative-caret-position="457">
+              <caret line="40" column="4" lean-forward="true" selection-start-line="40" selection-start-column="4" selection-end-line="40" selection-end-column="34" />
               <folding>
                 <element signature="e#0#35#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/requests/requestactions/testsetup.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="209">
+              <caret line="131" column="1" selection-start-line="131" selection-start-column="1" selection-end-line="131" selection-end-column="1" />
+              <folding>
+                <element signature="e#0#49#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -47,20 +59,17 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Static_content/js/taketest.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="44" column="34" selection-start-line="44" selection-start-column="34" selection-end-line="44" selection-end-column="34" />
+            <state relative-caret-position="102">
+              <caret line="102" column="46" selection-start-line="102" selection-start-column="46" selection-end-line="102" selection-end-column="46" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/requests/requestactions/testsetup.py">
+        <entry file="file://$PROJECT_DIR$/Testtakers/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="108" column="30" selection-start-line="108" selection-start-column="30" selection-end-line="108" selection-end-column="30" />
-              <folding>
-                <element signature="e#0#49#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="239">
+              <caret line="41" column="1" lean-forward="true" selection-start-line="41" selection-start-column="1" selection-end-line="41" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -88,18 +97,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="323">
               <caret line="29" column="59" lean-forward="true" selection-start-line="29" selection-start-column="59" selection-end-line="29" selection-end-column="99" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Testtakers/urls.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="22" column="20" selection-start-line="22" selection-start-column="20" selection-end-line="22" selection-end-column="20" />
-              <folding>
-                <element signature="e#634#666#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -166,8 +163,8 @@
         <option value="$PROJECT_DIR$/Static_content/js/testselection.js" />
         <option value="$PROJECT_DIR$/testsetup/urls.py" />
         <option value="$PROJECT_DIR$/requests/views.py" />
-        <option value="$PROJECT_DIR$/testsetup/views.py" />
         <option value="$PROJECT_DIR$/templates/taketest.html" />
+        <option value="$PROJECT_DIR$/testsetup/views.py" />
         <option value="$PROJECT_DIR$/requests/requestactions/testsetup.py" />
         <option value="$PROJECT_DIR$/Static_content/js/taketest.js" />
       </list>
@@ -201,6 +198,16 @@
               <item name="Django_Project" type="462c0819:PsiDirectoryNode" />
               <item name="requests" type="462c0819:PsiDirectoryNode" />
               <item name="requestactions" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Django_Project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Django_Project" type="462c0819:PsiDirectoryNode" />
+              <item name="testsetup" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Django_Project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Django_Project" type="462c0819:PsiDirectoryNode" />
+              <item name="Testtakers" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -478,13 +485,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Testtakers/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="222">
-          <caret line="40" column="13" selection-start-line="40" selection-start-column="5" selection-end-line="40" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/testsetup/urls.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="141">
@@ -526,16 +526,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/testsetup/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="127">
-          <caret line="32" column="39" selection-start-line="32" selection-start-column="39" selection-end-line="32" selection-end-column="39" />
-          <folding>
-            <element signature="e#0#35#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Static_content/js/testselection.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
@@ -557,10 +547,27 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Testtakers/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="239">
+          <caret line="41" column="1" lean-forward="true" selection-start-line="41" selection-start-column="1" selection-end-line="41" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/testsetup/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="457">
+          <caret line="40" column="4" lean-forward="true" selection-start-line="40" selection-start-column="4" selection-end-line="40" selection-end-column="34" />
+          <folding>
+            <element signature="e#0#35#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/requests/requestactions/testsetup.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="108" column="30" selection-start-line="108" selection-start-column="30" selection-end-line="108" selection-end-column="30" />
+        <state relative-caret-position="209">
+          <caret line="131" column="1" selection-start-line="131" selection-start-column="1" selection-end-line="131" selection-end-column="1" />
           <folding>
             <element signature="e#0#49#0" expanded="true" />
           </folding>
@@ -569,8 +576,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Static_content/js/taketest.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="44" column="34" selection-start-line="44" selection-start-column="34" selection-end-line="44" selection-end-column="34" />
+        <state relative-caret-position="102">
+          <caret line="102" column="46" selection-start-line="102" selection-start-column="46" selection-end-line="102" selection-end-column="46" />
         </state>
       </provider>
     </entry>

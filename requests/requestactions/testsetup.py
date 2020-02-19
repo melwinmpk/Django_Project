@@ -122,8 +122,13 @@ class testsetup:
 
     def checkanswerAck(self,request):
         self.userlogincheck()
+        print(request.session['subjectids'])
+        print(request.session['QuestionIds'])
         question_ans = Questions.objects.filter(id=self.questionid).values_list('Ans')
         return json.dumps({'status': 'success', 'data': {'questionid':self.questionid,"Ans":list(question_ans)[0][0]}})
+    def gettestquestionidsAck(self,request):
+        self.userlogincheck()
+        return json.dumps({'status': 'success', 'data': {'subjectids': request.session['subjectids'], "QuestionIds": request.session['QuestionIds']}})
     def render_data(self,view, data=None):
         if data == None:
             return {'title': view, 'view_js': view + '.js', 'view_css': view + '.css'}

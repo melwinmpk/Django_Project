@@ -1,9 +1,29 @@
 $(document).ready(function(){
     var dom = $('#taketest_div');
 
-    var subject_ids = JSON.parse(($(dom).attr('data-subjectIds')).replace(/'/g, '"'));
-    var question_Ids = JSON.parse(($(dom).attr('data-questionids')).replace(/'/g, '"'));
-    var currentquestionindex = 1,currentsubjectindex = 1 ;
+    var subject_ids = 0, question_Ids = 0 , currentquestionindex = 0,currentsubjectindex = 0,currentsubjectid = 0  ;
+    $.ajax({
+        type    : "POST",
+        url     : '/ajax/request',
+        dataType: 'json',
+        data: {
+          'mode'             :'testsetup',
+          'ack'              :'gettestquestionids',
+          csrfmiddlewaretoken:$(dom).find('input[name=csrfmiddlewaretoken]').val()
+        },
+        success: function (data) {
+          if(data.status == "success")
+          {
+            subject_ids = JSON.parse(data.data.subjectids)
+            question_Ids = data.data.QuestionIds
+            currentsubjectid = parseInt(subject_ids[0])
+          }
+          else
+          {
+            alert(data);
+          }
+        }
+    });
     $(dom).find('.js-checkanswer').unbind().bind('click',this,function(e){
         var optionindex = 1;
         var count=1;
@@ -38,11 +58,11 @@ $(document).ready(function(){
                         alert("Right answer!"+optionindex);
                         console.log(question_Ids);
                         console.log(currentquestionindex);
-                        loadNextQuestion(question_Ids[1][++currentquestionindex]);
+                        nextquestion();
                     }
                     else{
                         alert("Wrong answer!");
-                        loadNextQuestion(question_Ids[1][++currentquestionindex]);
+                        nextquestion();
                     }
                   }
                   else
@@ -76,6 +96,22 @@ $(document).ready(function(){
               }
             }
         });
+    }
+
+    function nextquestion(){
+
+        if(question_Ids[currentsubjectid].length > currentquestionindex)
+        {
+             loadNextQuestion(question_Ids[currentsubjectid][++currentquestionindex])
+        }
+        else if(subject_ids.length > currentsubjectindex ){
+            alert(false) // end of the test
+        }
+        else{
+            currentquestionindex = 0;
+            currentsubjectid = parseInt(subject_ids[++currentsubjectindex])
+            loadNextQuestion(question_Ids[++currentsubjectindex][currentquestionindex])
+        }
     }
 
 //    $.ajax({
