@@ -18,6 +18,16 @@
         {% csrf_token %}
         {% if user.is_authenticated %}
             <li>Hello,{{user.first_name}}</li>
+            <div class="result">
+                <div>
+                    <span>Score:</span>
+                    <span class="score">0</span>
+                </div>
+                <div>
+                    <span>Attempted:</span>
+                    <span class="attempted">0</span>
+                </div>
+            </div>
             <div class="QuestionOuterDiv" data-questionId="{{data.questiondata.id}}">
                 <div>
                     <span>Question Type:<span>{{data.questiondata.QuesType}}</span></span>
