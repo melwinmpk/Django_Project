@@ -19,7 +19,7 @@
     <h2>System Set Up</h2>
     <ul>
         <li><b>PreRequisite:</b>Django should have been already installed in a particular environment</li>
-        <li><b>PreRequisite:</b>In this Project, I PostGresSQL so those setups have used been already installed</li>
+        <li><b>PreRequisite:</b>In this Project, I used PostGresSQL so those setups have used been already installed</li>
         <li>Clone the Project to the respective directory</li>
         <li>In this project Postgres is used So change the host, password, Username, DatabaseName accordingly</li>
         <pre>
