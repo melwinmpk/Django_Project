@@ -18,10 +18,10 @@
 <div>
     <h2>System Set Up</h2>
     <ul>
-        <li><b>PreRequsit :</b> Django should have been already installed in a perticular environment</li>
-        <li><b>PreRequsit :</b> In this Project I PostGresSQL so those setup have used been already installed</li>
+        <li><b>PreRequisite:</b>Django should have been already installed in a particular environment</li>
+        <li><b>PreRequisite:</b>In this Project, I PostGresSQL so those setups have used been already installed</li>
         <li>Clone the Project to the respective directory</li>
-        <li>In this project PostGres is used So change  the host ,password ,Username, DatabaseName accordingly the </li>
+        <li>In this project Postgres is used So change the host, password, Username, DatabaseName accordingly</li>
         <pre>
         'default': {
                         'ENGINE': 'django.db.backends.postgresql',
@@ -31,11 +31,11 @@
                         'HOST': 'localhost'
                     }
         </pre>
-        <li>We will br requiring a connector fot the postgresSQL to connect to python</li>
+        <li>We will be requiring a connector for the PostgreSQL to connect to the python</li>
         <pre>pip install psycopg2</pre>
-        <li>Set the static forlder </li>
+        <li>Set the static folder</li>
         <pre>python manage.py collectstatic</pre>
-        <li>By default the static forlder will be created in the name of assets(Django which creates) and Static_content you can change the location in settings.py</li>
+        <li>By default, the static folder will be created in the name of assets(Django which creates) and Static_content you can change the location in settings.py</li>
         <li>For Migeration run commands</li>
         <pre>python manage.py makemigrations</pre>
         <pre>python manage.py migrate</pre>
