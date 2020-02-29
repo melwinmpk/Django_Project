@@ -1,7 +1,7 @@
 from  django.contrib.auth.models import User,auth
 from django.shortcuts import render, redirect
 from django.contrib import messages
-from testsetup.models import SubjectDefinition,Questions
+from testsetup.models import SubjectDefinition,Questions,QuestionDefinition
 import json
 import random
 import base64
@@ -52,11 +52,11 @@ class testsetup:
     def savequestionAck(self,request):
         self.userlogincheck()
         questionobj = Questions(
-            Subjectid = self.subjectid,
-            Question  = self.Question,
-            Options   = self.options,
-            QuesType  = self.questiontype,
-            Ans       = self.Ans)
+            SubjectId       = SubjectDefinition.objects.get(SubjectId=self.subjectid),
+            Question        = self.Question,
+            Options         = self.options,
+            QuestionTypeId  = QuestionDefinition.objects.get(QuestionTypeId=self.questiontype),
+            Ans             = self.Ans)
         questionobj.save()
         return json.dumps({'status':'success'})
 
@@ -72,7 +72,8 @@ class testsetup:
             subjectid_data = data['subjectids']
 
         for subjectid in subjectid_data:
-            Subject_questionid_list = list(Questions.objects.filter(Subjectid=subjectid).values_list('id'))
+            # print(subjectid)
+            Subject_questionid_list = list(Questions.objects.filter(SubjectId=subjectid).values_list('id'))
 
             if len(Subject_questionid_list) > 0 :
                 randomIds = self.randomgenerator(len(Subject_questionid_list) - 1)

@@ -22,24 +22,25 @@
                 <span>Question Type:</span>
                 <select id="selectquestionType" >
                   {% for value in data.questionType %}
-                    <option value="{{value.id}}" class="selected">{{value.QuestionType}}</option>
+                    {{value}}
+                    <option value="{{value.QuestionTypeId}}" class="selected">{{value.QuestionType}}</option>
                   {% endfor %}
                 </select>
             </div>
             <div class="tab-content">
               {% for value in data.questionType %}
-                <div role="tabpane" {{value.QuestionType}} data-Qtype="{{value.QuestionType}}" data-Qtypeid="{{value.id}}"
-                 {% if value.id == 1%}
-                    class="tab-pane {{value.id}} fade active in"
+                <div role="tabpane" {{value.QuestionType}} data-Qtype="{{value.QuestionType}}" data-Qtypeid="{{value.QuestionTypeId}}"
+                 {% if value.QuestionTypeId == 1%}
+                    class="tab-pane {{value.QuestionTypeId}} fade active in"
                  {% else %}
-                    class="tab-pane {{value.id}} fade"
+                    class="tab-pane {{value.QuestionTypeId}} fade"
                  {%endif %}
                  id="tab-pane">
                     <div>
                         <span>Subject:</span>
                         <select id="selectSubject" class="form-control" name="floorplan">
                           {% for value1 in data.subjects %}
-                            <option value="{{value1.id}}">{{value1.SubjectName}}</option>
+                            <option value="{{value1.SubjectId}}">{{value1.SubjectName}}</option>
                           {% endfor %}
                         </select>
                     </div>
@@ -47,7 +48,7 @@
                         <span>Question:</span>
                         <textarea class="questiontext" rows="4" cols="50"></textarea>
                     </div>
-                    {% if value.id == 1 %}
+                    {% if value.QuestionTypeId == 1 %}
                         <div class="mcqoptions">
                             <div class="optiondiv">
                                 <span>Option 1:</span>
