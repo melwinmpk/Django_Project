@@ -123,13 +123,13 @@ class testsetup:
 
     def checkanswerAck(self,request):
         self.userlogincheck()
-        print(request.session['subjectids'])
-        print(request.session['QuestionIds'])
         question_ans = Questions.objects.filter(id=self.questionid).values_list('Ans')
         return json.dumps({'status': 'success', 'data': {'questionid':self.questionid,"Ans":list(question_ans)[0][0]}})
     def gettestquestionidsAck(self,request):
         self.userlogincheck()
-        return json.dumps({'status': 'success', 'data': {'subjectids': request.session['subjectids'], "QuestionIds": request.session['QuestionIds']}})
+        # request.session['questiontypes'] = QuestionDefinition.objects.all()  "QuestionTypes":request.session['questiontypes']
+        # request.session['subjectdata'] = SubjectDefinition.objects.filter(SubjectId=request.GET['subjectids'])
+        return json.dumps({'status': 'success', 'data': {'subjectids': request.session['subjectids'], "QuestionIds": request.session['QuestionIds'],"Subjectdata":request.session['subjectdata'],"QuestionTypes":request.session['questiontypes']}})
     def render_data(self,view, data=None):
         if data == None:
             return {'title': view, 'view_js': view + '.js', 'view_css': view + '.css'}
