@@ -1,6 +1,6 @@
 $(document).ready(function(){
     var dom = $('#taketest_div');
-    var subject_ids = 0, question_Ids = 0 , currentquestionindex = 0,currentsubjectindex = 0,currentsubjectid = 0,totalscore = 0,attempted = 0  ;
+    var subject_ids = 0, question_Ids = 0 , currentquestionindex = 0,currentsubjectindex = 0,currentsubjectid = 0,totalscore = 0,attempted = 0,Subjectdata = {}  ;
     $.ajax({
         type    : "POST",
         url     : '/ajax/request',
@@ -16,6 +16,10 @@ $(document).ready(function(){
             subject_ids = JSON.parse(data.data.subjectids)
             question_Ids = data.data.QuestionIds
             currentsubjectid = parseInt(subject_ids[0])
+            console.log(data.data.Subjectdata);
+            console.log(data.data.QuestionTypes);
+            QuestionTypes = data.data.QuestionTypes;
+            Subjectdata = data.data.Subjectdata;
           }
           else
           {
@@ -56,7 +60,8 @@ $(document).ready(function(){
         console.log("currentquestionindex=>",currentquestionindex);
         console.log("question_Ids[currentsubjectid]=>",question_Ids[currentsubjectid]);
         console.log("subject_ids=>",subject_ids);
-        console.log("currentsubjectindex=>",currentsubjectindex)
+        console.log("currentsubjectindex=>",currentsubjectindex);
+        console.log("question_Ids=>",question_Ids);
         if(question_Ids[currentsubjectid].length - 1 > currentquestionindex)
         {
              loadNextQuestion(question_Ids[currentsubjectid][++currentquestionindex])
@@ -72,24 +77,25 @@ $(document).ready(function(){
         else{
             currentquestionindex = 0;
             currentsubjectid = parseInt(subject_ids[++currentsubjectindex])
-            loadNextQuestion(question_Ids[++currentsubjectindex][currentquestionindex])
+            loadNextQuestion(question_Ids[currentsubjectid][currentquestionindex])
         }
     }
     function loadquestion(data){
         var questionouterdiv = $(dom).find('.QuestionOuterDiv');
-
-        if(data.QuesType == 1)
+        var html_data = '';
+        if(data.QuestionTypeId_id == 1)
         {
             html_data = loadmcqhtml(data)
         }
+//        $(dom).
         $(dom).find('.QuestionOuterDiv').html(html_data);
         bindevents();
     }
     function loadmcqhtml(data){
         var html = ''
         html = '<div>'+
-                    '<span>Question Type:<span>1</span></span>'+
-                    '<span>Subject:<span>1</span></span>'+
+                    '<span>Question Type:<span>'+QuestionTypes[data.QuestionTypeId_id]['QuestionType']+'</span></span>'+
+                    '<span>Subject:<span>'+Subjectdata[data.SubjectId_id]['SubjectName']+'</span></span>'+
                 '</div>'+
                 '<div class="Question">'+
                     data.Question+
