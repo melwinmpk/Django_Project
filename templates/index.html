@@ -5,27 +5,78 @@
 {% endblock title %}
 
 {% block view_css_tag %}
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" type="text/css" href="{% static 'landingpage/css/normalize.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'landingpage/css/demo.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'landingpage/css/component.css' %}" />
     <link rel="stylesheet" type="text/css" href="{% static 'css/'|add:view_css %}">
+	<script src="{% static 'landingpage/js/modernizr.custom.25376.js' %}"></script>
 {% endblock view_css_tag %}
 
 {% block view_js_tag %}
+    <script src="{% static 'landingpage/js/classie.js' %}"></script>
+    <script src="{% static 'landingpage/js/menu.js' %}"></script>
     <script src="{% static 'js/'|add:view_js %}"></script>
 {% endblock view_js_tag %}
 
 {% block content %}
+<!--    <div id="{{title}}_div">-->
+<!--        <h1>{{ title }}</h1>-->
+<!--        {% if user.is_authenticated %}-->
+<!--            <li>Hello,{{user.first_name}}</li>-->
+<!--            {% if user.is_staff%}-->
+<!--                <li><a href="/testsetup/add_question">addQuestion</a></li>-->
+<!--                <li><a href="/testsetup/create_subject">Create Subject</a></li>-->
+<!--            {% endif %}-->
+<!--        <li><a href="/testsetup/testselection">Take Test</a></li>-->
+<!--            <li><a href="/logout">Logout</a></li>-->
+<!--        {% else %}-->
+<!--            <li><a href="/register">Register</a></li>-->
+<!--            <li><a href="/login">Login</a></li>-->
+<!--        {% endif %}-->
+<!--    </div>-->
     <div id="{{title}}_div">
-        <h1>{{ title }}</h1>
-        {% if user.is_authenticated %}
-            <li>Hello,{{user.first_name}}</li>
-            {% if user.is_staff%}
-                <li><a href="/testsetup/add_question">addQuestion</a></li>
-                <li><a href="/testsetup/create_subject">Create Subject</a></li>
-            {% endif %}
-        <li><a href="/testsetup/testselection">Take Test</a></li>
-            <li><a href="/logout">Logout</a></li>
-        {% else %}
-            <li><a href="/register">Register</a></li>
-            <li><a href="/login">Login</a></li>
-        {% endif %}
+		<div id="perspective" class="perspective effect-airbnb">
+			<div class="container">
+				<div class="wrapper"><!-- wrapper needed for scroll -->
+					<!-- Top Navigation -->
+					<header class="codrops-header">
+						<h1>TestTakers
+							{% if user.is_authenticated %}
+									<span>Welcome,{{user.first_name}}</span>
+							{% endif %}
+						</h1>
+					</header>
+					<div class="main clearfix">
+						<div class="column ">
+							<p><button id="showMenu">Show Menu</button></p>
+						</div>
+						<div class="column">
+							{% if user.is_authenticated %}
+								{% if user.is_staff%}
+							<p><h2><b>Test Takers</b></h2> <span class="student_text"> is a platform for the students to take the test and get to know about their marks.</span></p>
+							<p><span>Teachers can create new subjects and add Questions to it. Click to the menu for more details </span></p>
+								{% endif %}
+							{% else %}
+								<span class="student_text">Test Takers is a web site for the students to take the test and get to know about their marks. Click to the menu for more details </span>
+							{% endif %}
+						</div>
+					</div><!-- /main -->
+				</div><!-- wrapper -->
+			</div><!-- /container -->
+			<nav class="outer-nav left vertical">
+                {% if user.is_authenticated %}
+                    {% if user.is_staff%}
+                        <a class="icon-home" href="/testsetup/add_question">addQuestion</a>
+                        <a class="icon-home" href="/testsetup/create_subject">Create Subject</a>
+                    {% endif %}
+                    <a class="icon-home" href="/testsetup/testselection">Take Test</a>
+                    <a class="icon-home" href="/logout">Logout</a>
+                {% else %}
+                    <a class="icon-home" href="/register">Register</a>
+                    <a class="icon-home" href="/login">Login</a>
+                {% endif %}
+			</nav>
+		</div>
     </div>
 {% endblock content %}
