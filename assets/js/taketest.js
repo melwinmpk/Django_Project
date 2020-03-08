@@ -115,12 +115,33 @@ $(document).ready(function(){
                 '<div>'+
                     '<button class="js-checkanswer">Save</button>'+
                 '</div>';
+
+     html =            '<div class="dquizquestion">'+
+                            data.Question+
+                        '</div>'+
+                        '<div class = "OptionsOuterDiv">';
+                        var options = JSON.parse(data.Options);
+                        for (option in options)
+                        {
+     html +=                '<label class="quizlabel no_hover js-checkanswer">'+
+                                '<input type="radio" class="radioButton" name="undefined+639770" value="'+option+'">'+
+                                '<div class="labelDiv container">'+
+                                    '<div class="option_msg">'+
+                                        '<div class="radioText">'+
+                                            option+
+                                        '</div>'+
+                                        '<div class="indicator"></div>'
+                                    '</div>'+
+                                '</div>'+
+                            '</label>';
+                        }
+     html +=            '</div>';
      return html;
     }
     function bindevents()
     {
-        $(dom).find('.result').find('.score').html(totalscore);
-        $(dom).find('.result').find('.attempted').html(attempted);
+        $(dom).find('.marks').find('.score').html(totalscore);
+        $(dom).find('.marks').find('.attempted').html(attempted);
         $(dom).find('.js-checkanswer').unbind().bind('click',this,function(e){
             var optionindex = 1;
             var count=1;

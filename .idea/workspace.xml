@@ -4,7 +4,9 @@
     <list default="true" id="0de834da-5e0f-4194-ba1b-1cfedf38b1d8" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Static_content/css/taketest.css" beforeDir="false" afterPath="$PROJECT_DIR$/Static_content/css/taketest.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Static_content/js/taketest.js" beforeDir="false" afterPath="$PROJECT_DIR$/Static_content/js/taketest.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/css/taketest.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/taketest.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/js/taketest.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/taketest.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/taketest.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/taketest.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -39,8 +41,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/taketest.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="188">
-              <caret line="82" column="56" lean-forward="true" selection-start-line="82" selection-start-column="56" selection-end-line="82" selection-end-column="56" />
+            <state relative-caret-position="68">
+              <caret line="77" column="51" lean-forward="true" selection-start-line="77" selection-start-column="51" selection-end-line="77" selection-end-column="51" />
               <folding>
                 <element signature="e#2592#2598#0" expanded="true" />
                 <element signature="e#2693#2699#0" expanded="true" />
@@ -51,11 +53,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Static_content/css/taketest.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="181">
-              <caret line="119" column="23" selection-start-line="119" selection-start-column="23" selection-end-line="119" selection-end-column="23" />
+            <state relative-caret-position="351">
+              <caret line="163" column="1" lean-forward="true" selection-start-line="163" selection-start-column="1" selection-end-line="163" selection-end-column="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Static_content/js/taketest.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="186">
+              <caret line="132" column="72" selection-start-line="132" selection-start-column="72" selection-end-line="132" selection-end-column="72" />
             </state>
           </provider>
         </entry>
@@ -65,15 +76,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="425">
               <caret line="25" lean-forward="true" selection-start-line="25" selection-end-line="25" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-516">
-              <caret line="23" column="35" lean-forward="true" selection-start-line="23" selection-start-column="35" selection-end-line="23" selection-end-column="35" />
             </state>
           </provider>
         </entry>
@@ -121,6 +123,8 @@
       <find>gettestquestionids</find>
       <find>loadquestion</find>
       <find>loadmcqhtml</find>
+      <find>js-checkanswer</find>
+      <find>OptionsOuterDiv</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -158,7 +162,6 @@
         <option value="$PROJECT_DIR$/templates/questionAdd.html" />
         <option value="$PROJECT_DIR$/templates/testselection.html" />
         <option value="$PROJECT_DIR$/requests/requestactions/testsetup.py" />
-        <option value="$PROJECT_DIR$/Static_content/js/taketest.js" />
         <option value="$PROJECT_DIR$/testsetup/views.py" />
         <option value="$PROJECT_DIR$/Static_content/css/login.css" />
         <option value="$PROJECT_DIR$/Static_content/css/register.css" />
@@ -166,8 +169,9 @@
         <option value="$PROJECT_DIR$/templates/register.html" />
         <option value="$PROJECT_DIR$/Static_content/css/index.css" />
         <option value="$PROJECT_DIR$/templates/index.html" />
-        <option value="$PROJECT_DIR$/templates/taketest.html" />
         <option value="$PROJECT_DIR$/Static_content/css/taketest.css" />
+        <option value="$PROJECT_DIR$/templates/taketest.html" />
+        <option value="$PROJECT_DIR$/Static_content/js/taketest.js" />
       </list>
     </option>
   </component>
@@ -200,6 +204,12 @@
               <item name="Django_Project" type="462c0819:PsiDirectoryNode" />
               <item name="Static_content" type="462c0819:PsiDirectoryNode" />
               <item name="css" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Django_Project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Django_Project" type="462c0819:PsiDirectoryNode" />
+              <item name="Static_content" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -467,13 +477,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Static_content/js/taketest.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="171" column="5" selection-start-line="171" selection-start-column="5" selection-end-line="171" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Static_content/login/css/main.css">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -588,10 +591,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Static_content/css/taketest.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="351">
+          <caret line="163" column="1" lean-forward="true" selection-start-line="163" selection-start-column="1" selection-end-line="163" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/templates/taketest.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="188">
-          <caret line="82" column="56" lean-forward="true" selection-start-line="82" selection-start-column="56" selection-end-line="82" selection-end-column="56" />
+        <state relative-caret-position="68">
+          <caret line="77" column="51" lean-forward="true" selection-start-line="77" selection-start-column="51" selection-end-line="77" selection-end-column="51" />
           <folding>
             <element signature="e#2592#2598#0" expanded="true" />
             <element signature="e#2693#2699#0" expanded="true" />
@@ -601,10 +611,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Static_content/css/taketest.css">
+    <entry file="file://$PROJECT_DIR$/Static_content/js/taketest.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="181">
-          <caret line="119" column="23" selection-start-line="119" selection-start-column="23" selection-end-line="119" selection-end-column="23" />
+        <state relative-caret-position="186">
+          <caret line="132" column="72" selection-start-line="132" selection-start-column="72" selection-end-line="132" selection-end-column="72" />
         </state>
       </provider>
     </entry>

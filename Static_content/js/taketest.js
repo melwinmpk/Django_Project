@@ -93,38 +93,60 @@ $(document).ready(function(){
     }
     function loadmcqhtml(data){
         var html = ''
-        html = '<div>'+
-                    '<span>Question Type:<span>'+QuestionTypes[data.QuestionTypeId_id]['QuestionType']+'</span></span>'+
-                    '<span>Subject:<span>'+Subjectdata[data.SubjectId_id]['SubjectName']+'</span></span>'+
-                '</div>'+
-                '<div class="Question">'+
-                    data.Question+
-                '</div>'+
-                '<div class="OptionsOuterDiv">';
-                var options = JSON.parse(data.Options);
-                for(option in options)
-                {
-                    html += '<div class="option">'+
-                                '<input type="radio" name="option_radio" value="'+options[option]+'">'+
-                                '<span>'+options[option]+'</span>'+
-                            '</div>';
-                }
+//        html = '<div>'+
+//                    '<span>Question Type:<span>'+QuestionTypes[data.QuestionTypeId_id]['QuestionType']+'</span></span>'+
+//                    '<span>Subject:<span>'+Subjectdata[data.SubjectId_id]['SubjectName']+'</span></span>'+
+//                '</div>'+
+//                '<div class="Question">'+
+//                    data.Question+
+//                '</div>'+
+//                '<div class="OptionsOuterDiv">';
+//                var options = JSON.parse(data.Options);
+//                for(option in options)
+//                {
+//                    html += '<div class="option">'+
+//                                '<input type="radio" name="option_radio" value="'+options[option]+'">'+
+//                                '<span>'+options[option]+'</span>'+
+//                            '</div>';
+//                }
+//
+//
+//     html +=    '</div>'+
+//                '<div>'+
+//                    '<button class="js-checkanswer">Save</button>'+
+//                '</div>';
 
-
-     html +=    '</div>'+
-                '<div>'+
-                    '<button class="js-checkanswer">Save</button>'+
-                '</div>';
+     html =            '<div class="dquizquestion">'+
+                            data.Question+
+                        '</div>'+
+                        '<div class = "OptionsOuterDiv">';
+                        var options = JSON.parse(data.Options);
+                        for (option in options)
+                        {
+     html +=                '<label class="quizlabel no_hover js-checkanswer">'+
+                                '<input type="radio" class="radioButton" name="undefined+639770" value="'+option+'">'+
+                                '<div class="labelDiv container">'+
+                                    '<div class="option_msg">'+
+                                        '<div class="radioText">'+
+                                            option+
+                                        '</div>'+
+                                        '<div class="indicator"></div>'+
+                                    '</div>'+
+                                '</div>'+
+                            '</label>';
+                        }
+     html +=            '</div>';
+     console.log(html);
      return html;
     }
     function bindevents()
     {
-        $(dom).find('.result').find('.score').html(totalscore);
-        $(dom).find('.result').find('.attempted').html(attempted);
+        $(dom).find('.marks').find('.score').html(totalscore);
+        $(dom).find('.marks').find('.attempted').html(attempted);
         $(dom).find('.js-checkanswer').unbind().bind('click',this,function(e){
             var optionindex = 1;
             var count=1;
-            $(this).closest(".QuestionOuterDiv").find(".OptionsOuterDiv").find(".option").each(function(index,obj){
+            $(this).closest(".quizQuestDiv").find(".OptionsOuterDiv").find(".quizlabel").each(function(index,obj){
                 if($(this).find('input').prop("checked"))
                 {
                     console.log( $(this).find('input').val());
