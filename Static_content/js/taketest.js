@@ -1,6 +1,7 @@
 $(document).ready(function(){
     var dom = $('#taketest_div');
     var subject_ids = 0, question_Ids = 0 , currentquestionindex = 0,currentsubjectindex = 0,currentsubjectid = 0,totalscore = 0,attempted = 0,Subjectdata = {}  ;
+
     $.ajax({
         type    : "POST",
         url     : '/ajax/request',
@@ -87,8 +88,10 @@ $(document).ready(function(){
         {
             html_data = loadmcqhtml(data)
         }
-//        $(dom).
         $(dom).find('.QuestionOuterDiv').html(html_data);
+        $(dom).find('.QuestionOuterDiv').attr('data-questionid', question_Ids[currentsubjectid][currentquestionindex]);
+        $(dom).find('.question_type').html('Subject: <span>'+Subjectdata[data.SubjectId_id]['SubjectName']+'</span>');
+        $(dom).find('.quizquestnno').html(attempted+1);
         bindevents();
     }
     function loadmcqhtml(data){
@@ -123,8 +126,8 @@ $(document).ready(function(){
                         var options = JSON.parse(data.Options);
                         for (option in options)
                         {
-     html +=                '<label class="quizlabel no_hover js-checkanswer">'+
-                                '<input type="radio" class="radioButton" name="undefined+639770" value="'+option+'">'+
+     html +=                '<label class="quizlabel no_hover">'+
+                                '<input type="radio" class="radioButton js-checkanswer" name="undefined+639770" value="'+option+'">'+
                                 '<div class="labelDiv container">'+
                                     '<div class="option_msg">'+
                                         '<div class="radioText">'+
@@ -136,13 +139,13 @@ $(document).ready(function(){
                             '</label>';
                         }
      html +=            '</div>';
-     console.log(html);
      return html;
     }
     function bindevents()
     {
         $(dom).find('.marks').find('.score').html(totalscore);
         $(dom).find('.marks').find('.attempted').html(attempted);
+
         $(dom).find('.js-checkanswer').unbind().bind('click',this,function(e){
             var optionindex = 1;
             var count=1;
@@ -176,10 +179,12 @@ $(document).ready(function(){
                         {
                             totalscore++;
                             attempted++;
+                            $(this).closest(".quizlabel").addClass('correct');
                             nextquestion();
                         }
                         else{
                             attempted++;
+                            $(this).closest(".quizlabel").addClass('wrong');
                             nextquestion();
                         }
                       }
@@ -191,6 +196,9 @@ $(document).ready(function(){
                 });
 
         });
+//        $(dom).find(".nextQuestion ").unbind().bind('click',function(e){
+//            nextquestion();
+//        });
     }
 
 

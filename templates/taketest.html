@@ -69,9 +69,9 @@
             </div>
             <div class="marks col-lg-2 col-md-2 col-sm-4 col-xs-4" ><span class="attempted">11</span>&nbsp; Attempted</div>
             <div class="marks col-lg-2 col-md-2 col-sm-4 col-xs-4"><span class="score">11</span>&nbsp; Marks</div>
-            <div class="timer col-lg-3 col-md-3 col-sm-4 col-xs-4"><span class="timerHead">Question Type: <span>{{data.questiondata.SubjectId_id}}</span></span></div>
+            <div class="ques col-lg-3 col-md-3 col-sm-4 col-xs-4"><span class="question_type"> Subject: <span>{{data.questiondata.SubjectId_id}}</span></span></div>
         </div>
-        <div id="dailyquizCarousel-1295742" class="carousel slide QuestionOuterDiv" data-ride="carousel" data-interval="false" >
+        <div id="dailyquizCarousel-1295742" class="carousel slide " data-ride="carousel" data-interval="false" data-questionId="{{data.questiondata.id}}">
             <div class="carousel-inner" data-quiz="1295742">
                 <div class="item container quizQuestDiv QuestionOuterDiv active" data-questionId="{{data.questiondata.id}}">
 <!--                    <div class="selectQuesLang" langauge="english">-->
@@ -80,8 +80,8 @@
                         </div>
                         <div class = "OptionsOuterDiv">
                         {% for option in data.questiondata.Options %}
-                            <label class="quizlabel no_hover js-checkanswer">
-                                <input type="radio" class="radioButton" name="undefined+639770" value="{{option}}">
+                            <label class="quizlabel no_hover ">
+                                <input type="radio" class="radioButton js-checkanswer" name="undefined+639770" value="{{option}}">
                                 <div class="labelDiv container">
     <!--                                <div class="indexpadding">A</div>-->
                                     <div class="option_msg">
