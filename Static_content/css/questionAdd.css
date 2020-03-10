@@ -568,3 +568,8 @@ div.indicate img, .indicate-txt, div.indicate, li {
 .demo-title{
     text-align: center;
 }
+.xlbtn:hover {
+    background-color: #FDB615;
+    border: 1px solid #FDB615;
+    color: #fff;
+}

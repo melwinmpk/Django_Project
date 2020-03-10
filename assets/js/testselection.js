@@ -1,6 +1,9 @@
 $(document).ready(function(){
     var dom = $('#testselection_div');
-
+    $(dom).find('.js_back').unbind().bind('click',this,function(e){
+        e.preventDefault();
+        window.location.replace("/");
+    });
     $(dom).find('.js_taketest').unbind().bind('click',this,function(e){
         var subjects = [];
         var i = 0;
