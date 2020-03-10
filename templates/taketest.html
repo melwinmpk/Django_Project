@@ -13,42 +13,94 @@
 {% endblock view_js_tag %}
 
 {% block content %}
-    <div id="{{title}}_div" data-subjectIds = "{{data.subjectids}}" data-questionIds = "{{data.QuestionIds}}" data-questiondata = "{{data.questiondata}}">
-        <h1>{{ title }}</h1>
-        {% csrf_token %}
-        {% if user.is_authenticated %}
-            <li>Hello,{{user.first_name}}</li>
-            <div class="result">
-                <div>
-                    <span>Score:</span>
-                    <span class="score">0</span>
-                </div>
-                <div>
-                    <span>Attempted:</span>
-                    <span class="attempted">0</span>
-                </div>
+<!--    <div id="{{title}}_div" data-subjectIds = "{{data.subjectids}}" data-questionIds = "{{data.QuestionIds}}" >-->
+<!--        <h1>{{ title }}</h1>-->
+<!--        {% csrf_token %}-->
+<!--        {% if user.is_authenticated %}-->
+<!--            <li>Hello,{{user.first_name}}</li>-->
+<!--            <div class="result">-->
+<!--                <div>-->
+<!--                    <span>Score:</span>-->
+<!--                    <span class="score">0</span>-->
+<!--                </div>-->
+<!--                <div>-->
+<!--                    <span>Attempted:</span>-->
+<!--                    <span class="attempted">0</span>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--            <div class="QuestionOuterDiv" data-questionId="{{data.questiondata.id}}">-->
+<!--                <div>-->
+<!--                    <span>Question Type:<span>{{data.questiondata.QuestionTypeId_id}}</span></span>-->
+<!--                    <span>Subject:<span>{{data.questiondata.SubjectId_id}}</span></span>-->
+<!--                </div>-->
+<!--                <div class = "Question">-->
+<!--                    {{data.questiondata.Question}}-->
+<!--                </div>-->
+<!--                {{data.questiondata.Options}}-->
+<!--                <div class = "OptionsOuterDiv">-->
+<!--                        {% for option in data.questiondata.Options %}-->
+<!--                            <div class="option">-->
+<!--                                <input type="radio" name="option_radio" value="{{option}}" >-->
+<!--                                <span>{{option}}</span>-->
+<!--                            </div>-->
+<!--                        {% endfor %}-->
+<!--                </div>-->
+<!--                <div>-->
+<!--                    <button class="js-checkanswer">Save</button>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        {% endif %}-->
+<!--    </div>-->
+
+
+
+<!-- /////////////////////////////////////////////QUIZ UI////////////////////////////////////////////// {{title}}_div -->
+<div id="{{title}}_div">
+    <div id="quizModal">
+     {% csrf_token %}
+{% if user.is_authenticated %}
+    <div  class="modal-body quizSection container">
+        <div class="description clearfix">
+            <div class="ques-Detail col-lg-5 col-md-5 col-sm-12 col-xs-12">
+                <div class="quizquestnno">1</div>
+                <div class="quiztitle">Subject: <span>{{data.questiondata.SubjectId_id}}</span></div>
+                <span>Question Type:<span class="question_type">{{data.questiondata.QuestionTypeId_id}}</span></span>
             </div>
-            <div class="QuestionOuterDiv" data-questionId="{{data.questiondata.id}}">
-                <div>
-                    <span>Question Type:<span>{{data.questiondata.QuestionTypeId_id}}</span></span>
-                    <span>Subject:<span>{{data.questiondata.SubjectId_id}}</span></span>
-                </div>
-                <div class = "Question">
-                    {{data.questiondata.Question}}
-                </div>
-                {{data.questiondata.Options}}
-                <div class = "OptionsOuterDiv">
+            <div class="marks col-lg-2 col-md-2 col-sm-4 col-xs-4" ><span class="attempted">11</span>&nbsp; Attempted</div>
+            <div class="marks col-lg-2 col-md-2 col-sm-4 col-xs-4"><span class="score">11</span>&nbsp; Marks</div>
+            <div class="ques col-lg-3 col-md-3 col-sm-4 col-xs-4"><span class="subject_name"> Subject: <span>{{data.questiondata.SubjectId_id}}</span></span></div>
+        </div>
+        <div id="dailyquizCarousel-1295742" class="carousel slide " data-ride="carousel" data-interval="false" data-questionId="{{data.questiondata.id}}">
+            <div class="carousel-inner" data-quiz="1295742">
+                <div class="item container quizQuestDiv QuestionOuterDiv active" data-questionId="{{data.questiondata.id}}">
+<!--                    <div class="selectQuesLang" langauge="english">-->
+                        <div class="dquizquestion">
+                            {{data.questiondata.Question}}
+                        </div>
+                        <div class = "OptionsOuterDiv">
                         {% for option in data.questiondata.Options %}
-                            <div class="option">
-                                <input type="radio" name="option_radio" value="{{option}}" >
-                                <span>{{option}}</span>
-                            </div>
+                            <label class="quizlabel no_hover ">
+                                <input type="radio" class="radioButton js-checkanswer" name="undefined+639770" value="{{option}}">
+                                <div class="labelDiv container">
+    <!--                                <div class="indexpadding">A</div>-->
+                                    <div class="option_msg">
+                                        <div class="radioText">
+                                            {{option}}
+                                        </div>
+                                        <div class="indicator"></div>
+                                    </div>
+                                </div>
+                            </label>
                         {% endfor %}
-                </div>
-                <div>
-                    <button class="js-checkanswer">Save</button>
+                        </div>
+                        <div class="col-xs-12 solutionTab"></div>
+<!--                    </div>-->
                 </div>
             </div>
-        {% endif %}
+        </div>
     </div>
+{% endif %}
+<div class="questionNavigation"><div><button class="checkSolution btn btn-primary-alt" style="display:none;">Solution</button><button class="nextQuestion btn btn-primary-alt">Next</button><button class="submit btn btn-primary" style="display:none;">Submit Quiz</button></div></div>
+</div>
+</div>
 {% endblock content %}
