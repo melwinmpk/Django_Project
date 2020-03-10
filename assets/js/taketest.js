@@ -1,6 +1,7 @@
 $(document).ready(function(){
     var dom = $('#taketest_div');
     var subject_ids = 0, question_Ids = 0 , currentquestionindex = 0,currentsubjectindex = 0,currentsubjectid = 0,totalscore = 0,attempted = 0,Subjectdata = {}  ;
+
     $.ajax({
         type    : "POST",
         url     : '/ajax/request',
@@ -87,10 +88,11 @@ $(document).ready(function(){
         {
             html_data = loadmcqhtml(data)
         }
-//        $(dom).
         $(dom).find('.QuestionOuterDiv').html(html_data);
         $(dom).find('.QuestionOuterDiv').attr('data-questionid', question_Ids[currentsubjectid][currentquestionindex]);
-        $(dom).find('.question_type').html('Subject: <span>'+Subjectdata[data.SubjectId_id]['SubjectName']+'</span>');
+        $(dom).find('.question_type').html(QuestionTypes[data.QuestionTypeId_id]['QuestionType']);
+        $(dom).find('.subject_name').html('Subject: <span>'+Subjectdata[data.SubjectId_id]['SubjectName']+'</span>');
+        $(dom).find('.quizquestnno').html(attempted+1);
         bindevents();
     }
     function loadmcqhtml(data){

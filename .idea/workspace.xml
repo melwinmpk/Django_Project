@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0de834da-5e0f-4194-ba1b-1cfedf38b1d8" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Static_content/js/taketest.js" beforeDir="false" afterPath="$PROJECT_DIR$/Static_content/js/taketest.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/taketest.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/taketest.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/taketest.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/taketest.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -39,8 +37,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/taketest.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="71" column="151" selection-start-line="71" selection-start-column="95" selection-end-line="71" selection-end-column="151" />
+            <state relative-caret-position="239">
+              <caret line="69" column="55" selection-start-line="69" selection-start-column="55" selection-end-line="69" selection-end-column="55" />
               <folding>
                 <element signature="e#2592#2598#0" expanded="true" />
                 <element signature="e#2693#2699#0" expanded="true" />
@@ -63,8 +61,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Static_content/js/taketest.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="93" column="53" selection-start-line="93" selection-start-column="53" selection-end-line="93" selection-end-column="53" />
+            <state relative-caret-position="170">
+              <caret line="99" column="25" lean-forward="true" selection-start-line="99" selection-start-column="25" selection-end-line="99" selection-end-column="25" />
             </state>
           </provider>
         </entry>
@@ -600,8 +598,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/taketest.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="71" column="151" selection-start-line="71" selection-start-column="95" selection-end-line="71" selection-end-column="151" />
+        <state relative-caret-position="239">
+          <caret line="69" column="55" selection-start-line="69" selection-start-column="55" selection-end-line="69" selection-end-column="55" />
           <folding>
             <element signature="e#2592#2598#0" expanded="true" />
             <element signature="e#2693#2699#0" expanded="true" />
@@ -613,8 +611,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Static_content/js/taketest.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="93" column="53" selection-start-line="93" selection-start-column="53" selection-end-line="93" selection-end-column="53" />
+        <state relative-caret-position="170">
+          <caret line="99" column="25" lean-forward="true" selection-start-line="99" selection-start-column="25" selection-end-line="99" selection-end-column="25" />
         </state>
       </provider>
     </entry>
