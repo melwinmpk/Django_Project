@@ -13,24 +13,56 @@
 {% endblock view_js_tag %}
 
 {% block content %}
+<!--    <div id="{{title}}_div">-->
+<!--        {% csrf_token %}-->
+<!--        <h1>{{ title }}</h1>-->
+<!--        <h4>Select the subjects which you wanted in the test.</h4>-->
+<!--        <ul class="subject_select">-->
+<!--            {% for value1 in data.subjects %}-->
+<!--                <li>-->
+<!--                    <div class="subjects">-->
+<!--                        <span>{{value1.SubjectName}} :</span>-->
+<!--                        <input type="checkbox" name="vehicle1" value="{{value1.SubjectId}}" data-subname = "{{value1.SubjectName}}">-->
+<!--                    </div>-->
+<!--                </li>-->
+<!--            {% endfor %}-->
+<!--        </ul>-->
+<!--        <div>-->
+<!--            <span>Enter the No. of questions you wanted in the Test</span>-->
+<!--            <input type="text" placeholder="Max Limit ">-->
+<!--        </div>-->
+<!--        <button class="js_taketest">Take Test</button>-->
+<!--    </div>-->
+
+
     <div id="{{title}}_div">
-        {% csrf_token %}
-        <h1>{{ title }}</h1>
-        <h4>Select the subjects which you wanted in the test.</h4>
-        <ul class="subject_select">
-            {% for value1 in data.subjects %}
-                <li>
-                    <div class="subjects">
-                        <span>{{value1.SubjectName}} :</span>
-                        <input type="checkbox" name="vehicle1" value="{{value1.SubjectId}}" data-subname = "{{value1.SubjectName}}">
-                    </div>
-                </li>
-            {% endfor %}
-        </ul>
-        <div>
-            <span>Enter the No. of questions you wanted in the Test</span>
-            <input type="text" placeholder="Max Limit ">
-        </div>
-        <button class="js_taketest">Take Test</button>
+            <div class="demo-title">
+                <h3> Select Subject </h3>
+                <p> Here You can select those Subjects which you wanted to take the test. </p>
+                <div class="vidu-brd">
+                    <span></span><span></span><span></span>
+                </div>
+            </div>
+            <div class="reg-form textbox-h38">
+				<div class="row inputtextanimation ">
+					<form id="signupform" class="subject_form subject_select">
+                        {% csrf_token %}
+                        {% for value1 in data.subjects %}
+                        <div class="subjects col-sm-6">
+                                <label for="exampleInputEmail1">{{value1.SubjectName}} :</label>
+                                <input type="checkbox" name="vehicle1" value="{{value1.SubjectId}}" data-subname = "{{value1.SubjectName}}">
+                        </div>
+                        {% endfor %}
+                        <div class="col-sm-12 text-center first-form">
+						    <div class="btn btn-default xlbtn btn-success js_taketest">
+						              		   Take Test
+		                  	</div>
+                            <div class="btn btn-default xlbtn btn-success js_back">
+						              		   BACK
+		                  	</div>
+						</div>
+                    </form>
+                </div>
+            </div>
     </div>
 {% endblock content %}

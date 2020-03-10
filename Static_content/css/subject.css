@@ -1,0 +1,116 @@
+.vidu-brd {
+    width: 160px;
+    height: 20px;
+    margin: 0 auto;
+    margin-top: 19px;
+    display: flex;
+}
+.vidu-brd span:nth-child(1) {
+    background-color: #FDB615;
+}
+.vidu-brd span:nth-child(2) {
+    background-color: #F7BFEA;
+}
+.vidu-brd span:nth-child(3) {
+    background-color: #00ACEA;
+}
+.vidu-brd span {
+    width: 36%;
+    height: 4px;
+    border: 0;
+}
+.login-pg h3 {
+    font-size: 28px;
+    font-weight: 100;
+    font-family: 'OpenSans-Light';
+    text-align: center;
+}
+.login-pg p {
+    font-size: 14px;
+    text-align: center;
+    font-family: 'OpenSans-Bold';
+    padding-top: 15px;
+}
+.reg-form {
+    transition: 0.5s;
+}
+.reg-form {
+    width: 683px;
+    margin: 0 auto;
+    margin-top: 17px;
+    background-color: #F4F5FD;
+    border-radius: 8px;
+    padding: 25px 30px;
+}
+.textbox-h38 label {
+    text-transform: uppercase;
+    font-size: 12px;
+    color: #3B3B3B;
+    padding-bottom: 9px;
+    font-family: 'OpenSans-Bold';
+}
+.textbox-h38 input {
+    font-size: 12px;
+    border: 1px solid #B0B7D0;
+    border-radius: 2px;
+    height: 38px;
+}
+.inputtextanimation input {
+    padding-left: 12px;
+    transition: 0.5s;
+}
+.form-control {
+    background-color: #FFFFFF;
+    background-image: none;
+    border: 1px solid #e5e6e7;
+    border-radius: 1px;
+    color: inherit;
+    display: block;
+    padding: 6px 10px;
+    transition: border-color 0.15s ease-in-out 0s, box-shadow 0.15s ease-in-out 0s;
+    width: 100%;
+    height: 35px;
+    box-shadow: none;
+}
+.reg-form:hover {
+    box-shadow: 0px 6px 35px -19px #111;
+    transition: 0.5s;
+}
+.reg-form .xlbtn {
+    width: 356px;
+    margin-top: 24px;
+    margin-bottom: 4px;
+    border-radius: 4px;
+}
+
+.xlbtn {
+    font-size: 14px;
+    color: #fff;
+    background-color: #00ACEA;
+    border: 1px solid #00ACEA;
+    text-transform: unset;
+    font-family: 'OpenSans-Bold';
+    height: 40px;
+    border-radius: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+    padding: 0;
+    line-height: 42px;
+    margin: 0 auto;
+    margin-top: 20px;
+    background-image: none;
+}
+
+.subjectname_css, .answer_css{
+   width:100%;
+}
+.demo-title{
+    text-align: center;
+}
+.xlbtn:hover {
+    background-color: #FDB615;
+    border: 1px solid #FDB615;
+    color: #fff;
+}

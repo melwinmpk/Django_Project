@@ -13,13 +13,42 @@
 {% endblock view_js_tag %}
 
 {% block content %}
+<!--    <div id="{{title}}_div">-->
+<!--        <h1>{{ title }}</h1>-->
+<!--        <form class="subject_form" onsubmit="return false"> &lt;!&ndash; action="login" &ndash;&gt;-->
+<!--            {% csrf_token %}-->
+<!--            <input class="js_subjectname" type="text" name="subjectname" placeholder="Subject Name"><br>-->
+<!--            <button class="savesubject_button" >Save</button><br>-->
+<!--            <button class="js_back">Back</button>-->
+<!--        </form>-->
+<!--    </div>-->
     <div id="{{title}}_div">
-        <h1>{{ title }}</h1>
-        <form class="subject_form" onsubmit="return false"> <!-- action="login" -->
-            {% csrf_token %}
-            <input class="js_subjectname" type="text" name="subjectname" placeholder="Subject Name"><br>
-            <button class="savesubject_button" >Save</button><br>
-            <button class="js_back">Back</button>
-        </form>
+            <div class="demo-title">
+                <h3> Add Subject </h3>
+                <p> Here You can Add a Subject then you can add questions to the Subject which you created. </p>
+                <div class="vidu-brd">
+                    <span></span><span></span><span></span>
+                </div>
+            </div>
+            <div class="reg-form textbox-h38">
+				<div class="row inputtextanimation ">
+					<form id="signupform" class="subject_form">
+                        {% csrf_token %}
+                        <div class="optiondiv col-sm-12">
+                            <label for="exampleInputEmail1">Subject Name:</label>
+                            <div><input class="js_subjectname subjectname_css" type="text" placeholder="Subject Name"></div>
+<!--                                <button>Cancel</button>-->
+                        </div>
+                        <div class="col-sm-12 text-center first-form">
+						    <div class="btn btn-default xlbtn btn-success savesubject_button">
+						              		   SAVE
+		                  	</div>
+                            <div class="btn btn-default xlbtn btn-success js_back">
+						              		   BACK
+		                  	</div>
+						</div>
+                    </form>
+                </div>
+            </div>
     </div>
 {% endblock content %}

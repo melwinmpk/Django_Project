@@ -162,3 +162,6 @@ div#quizModal .description {
     -webkit-appearance: none;
     display: block;
 }
+#quizModal .marks{
+    align-items: center !important;
+}

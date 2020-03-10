@@ -13,69 +13,170 @@
 {% endblock view_js_tag %}
 
 {% block content %}
-    <div id="{{title}}_div">
-        <h1>{{ title }}</h1>
-        <form class="questionadd_form" onsubmit="return false"> <!-- action="login" -->
-            {% csrf_token %}
+<!--    <div id="{{title}}_div">-->
+<!--        <h1>{{ title }}</h1>-->
+<!--        <form class="questionadd_form" onsubmit="return false"> &lt;!&ndash; action="login" &ndash;&gt;-->
+<!--            {% csrf_token %}-->
 
-            <div>
-                <span>Question Type:</span>
-                <select id="selectquestionType" >
-                  {% for value in data.questionType %}
-                    {{value}}
-                    <option value="{{value.QuestionTypeId}}" class="selected">{{value.QuestionType}}</option>
-                  {% endfor %}
-                </select>
-            </div>
-            <div class="tab-content">
-              {% for value in data.questionType %}
-                <div role="tabpane" {{value.QuestionType}} data-Qtype="{{value.QuestionType}}" data-Qtypeid="{{value.QuestionTypeId}}"
-                 {% if value.QuestionTypeId == 1%}
-                    class="tab-pane {{value.QuestionTypeId}} fade active in"
-                 {% else %}
-                    class="tab-pane {{value.QuestionTypeId}} fade"
-                 {%endif %}
-                 id="tab-pane">
-                    <div>
-                        <span>Subject:</span>
-                        <select id="selectSubject" class="form-control" name="floorplan">
-                          {% for value1 in data.subjects %}
-                            <option value="{{value1.SubjectId}}">{{value1.SubjectName}}</option>
-                          {% endfor %}
-                        </select>
-                    </div>
-                    <div>
-                        <span>Question:</span>
-                        <textarea class="questiontext" rows="4" cols="50"></textarea>
-                    </div>
-                    {% if value.QuestionTypeId == 1 %}
-                        <div class="mcqoptions">
-                            <div class="optiondiv">
-                                <span>Option 1:</span>
-                                <input class="js_option" type="text" placeholder="option 1">
-<!--                                <button>Cancel</button>-->
-                            </div>
-                            <div class="optiondiv">
-                                <span>Option 2:</span>
-                                <input class="js_option" type="text" placeholder="option 2">
-<!--                                <button>Cancel</button>-->
-                            </div>
-                        </div>
-                        <div>
-                            <button class="js_moreoptions">Add More Options</button>
-                            <div>
-                                <span>Answer:</span>
-                                <input class="js_ans" type="text" placeholder="Answer">
-                            </div>
-                        </div>
-                    {% elif value.id == 2 %}
-                    {% endif %}
+<!--            <div>-->
+<!--                <span>Question Type:</span>-->
+<!--                <select id="selectquestionType" >-->
+<!--                  {% for value in data.questionType %}-->
+<!--                    {{value}}-->
+<!--                    <option value="{{value.QuestionTypeId}}" class="selected">{{value.QuestionType}}</option>-->
+<!--                  {% endfor %}-->
+<!--                </select>-->
+<!--            </div>-->
+<!--            <div class="tab-content">-->
+<!--              {% for value in data.questionType %}-->
+<!--                <div role="tabpane" {{value.QuestionType}} data-Qtype="{{value.QuestionType}}" data-Qtypeid="{{value.QuestionTypeId}}"-->
+<!--                 {% if value.QuestionTypeId == 1%}-->
+<!--                    class="tab-pane {{value.QuestionTypeId}} fade active in"-->
+<!--                 {% else %}-->
+<!--                    class="tab-pane {{value.QuestionTypeId}} fade"-->
+<!--                 {%endif %}-->
+<!--                 id="tab-pane">-->
+<!--                    <div>-->
+<!--                        <span>Subject:</span>-->
+<!--                        <select id="selectSubject" class="form-control" name="floorplan">-->
+<!--                          {% for value1 in data.subjects %}-->
+<!--                            <option value="{{value1.SubjectId}}">{{value1.SubjectName}}</option>-->
+<!--                          {% endfor %}-->
+<!--                        </select>-->
+<!--                    </div>-->
+<!--                    <div>-->
+<!--                        <span>Question:</span>-->
+<!--                        <textarea class="questiontext" rows="4" cols="50"></textarea>-->
+<!--                    </div>-->
+<!--                    {% if value.QuestionTypeId == 1 %}-->
+<!--                        <div class="mcqoptions">-->
+<!--                            <div class="optiondiv">-->
+<!--                                <span>Option 1:</span>-->
+<!--                                <input class="js_option" type="text" placeholder="option 1">-->
+<!--&lt;!&ndash;                                <button>Cancel</button>&ndash;&gt;-->
+<!--                            </div>-->
+<!--                            <div class="optiondiv">-->
+<!--                                <span>Option 2:</span>-->
+<!--                                <input class="js_option" type="text" placeholder="option 2">-->
+<!--&lt;!&ndash;                                <button>Cancel</button>&ndash;&gt;-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                        <div>-->
+<!--                            <button class="js_moreoptions">Add More Options</button>-->
+<!--                            <div>-->
+<!--                                <span>Answer:</span>-->
+<!--                                <input class="js_ans" type="text" placeholder="Answer">-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    {% elif value.id == 2 %}-->
+<!--                    {% endif %}-->
+<!--                </div>-->
+<!--              {% endfor %}-->
+<!--            </div>-->
+
+<!--            <button class="js_savequestion_button" >Save</button><br>-->
+<!--            <button class="js_back">Back</button>-->
+<!--        </form>-->
+<!--    </div>-->
+
+
+
+
+
+
+
+
+
+
+
+<div id="{{title}}_div">
+            <div class="demo-title">
+                <h3> Add Question </h3>
+                <p> Here You can Add a Question to the respective Subjects. </p>
+                <div class="vidu-brd">
+                    <span></span><span></span><span></span>
                 </div>
-              {% endfor %}
             </div>
 
-            <button class="js_savequestion_button" >Save</button><br>
-            <button class="js_back">Back</button>
-        </form>
-    </div>
+			<div class="reg-form textbox-h38">
+				<div class="row inputtextanimation ">
+					<form id="signupform">
+                        {% csrf_token %}
+                       <div class="col-sm-12">
+                        <div class="form-group">
+                          <label for="exampleInputEmail1">Question Type:</label>
+                          <div class="tr-selectbox">
+                            <select id="selectquestionType" class="form-control" >
+                              {% for value in data.questionType %}
+                                {{value}}
+                                <option value="{{value.QuestionTypeId}}" class="selected">{{value.QuestionType}}</option>
+                              {% endfor %}
+                            </select>
+                          </div>
+	                    </div>
+                       </div>
+                       {% for value in data.questionType %}
+                            <div role="tabpane" {{value.QuestionType}} data-Qtype="{{value.QuestionType}}" data-Qtypeid="{{value.QuestionTypeId}}"
+                             {% if value.QuestionTypeId == 1%}
+                                class="tab-pane {{value.QuestionTypeId}} col-sm-12 fade active in "
+                             {% else %}
+                                class="tab-pane {{value.QuestionTypeId}} col-sm-12 fade"
+                             {%endif %}
+                             id="tab-pane">
+                                <div class="col-sm-12">
+                                    <div class="form-group">
+                                      <label for="exampleInputEmail1">Subject:</label>
+                                      <div class="tr-selectbox">
+                                        <select id="selectSubject" class="form-control" >
+                                          {% for value1 in data.subjects %}
+                                            <option value="{{value1.SubjectId}}">{{value1.SubjectName}}</option>
+                                          {% endfor %}
+                                        </select>
+                                      </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-12">
+                                        <label for="exampleInputEmail1">Question:</label>
+                                        <div class="questiontextbox_div"><textarea class="questiontext" rows="4" ></textarea></div>
+                                </div>
+                                {% if value.QuestionTypeId == 1 %}
+                                    <div class="mcqoptions col-sm-12">
+                                        <div class="optiondiv col-sm-12">
+                                            <label for="exampleInputEmail1">Option 1:</label>
+                                            <div><input class="js_option option_css" type="text" placeholder="Option 1"></div>
+            <!--                                <button>Cancel</button>-->
+                                        </div>
+                                        <div class="optiondiv col-sm-12">
+                                            <label for="exampleInputEmail1">Option 2:</label>
+                                            <div><input class="js_option option_css" type="text" placeholder="Option 2"></div>
+            <!--                                <button>Cancel</button>-->
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-12">
+                                        <button class="js_moreoptions">Add More Options</button>
+                                        <div class="col-sm-12">
+                                            <label for="exampleInputEmail1">Answer:</label>
+                                            <div><input class="js_ans answer_css" type="text" placeholder="Answer"></div>
+                                        </div>
+                                    </div>
+                                {% endif %}
+
+                            </div>
+
+                       {% endfor %}
+
+
+						<div class="col-sm-12 text-center first-form">
+						    <div class="btn btn-default xlbtn btn-success js_savequestion_button">
+						              		   SAVE
+		                  	</div>
+                            <div class="btn btn-default xlbtn btn-success js_back_button">
+						              		   BACK
+		                  	</div>
+						</div>
+
+                    </form>
+				</div>
+			</div>
+</div>
 {% endblock content %}
