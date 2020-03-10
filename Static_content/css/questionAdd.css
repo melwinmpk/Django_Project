@@ -1,0 +1,568 @@
+.vidu-brd {
+    width: 160px;
+    height: 20px;
+    margin: 0 auto;
+    margin-top: 19px;
+    display: flex;
+}
+.vidu-brd span:nth-child(1) {
+    background-color: #FDB615;
+}
+.vidu-brd span:nth-child(2) {
+    background-color: #F7BFEA;
+}
+.vidu-brd span:nth-child(3) {
+    background-color: #00ACEA;
+}
+.vidu-brd span {
+    width: 36%;
+    height: 4px;
+    border: 0;
+}
+.login-pg h3 {
+    font-size: 28px;
+    font-weight: 100;
+    font-family: 'OpenSans-Light';
+    text-align: center;
+}
+.login-pg p {
+    font-size: 14px;
+    text-align: center;
+    font-family: 'OpenSans-Bold';
+    padding-top: 15px;
+}
+.reg-form {
+    transition: 0.5s;
+}
+.reg-form {
+    width: 683px;
+    margin: 0 auto;
+    margin-top: 17px;
+    background-color: #F4F5FD;
+    border-radius: 8px;
+    padding: 25px 30px;
+}
+.textbox-h38 label {
+    text-transform: uppercase;
+    font-size: 12px;
+    color: #3B3B3B;
+    padding-bottom: 9px;
+    font-family: 'OpenSans-Bold';
+}
+.textbox-h38 input {
+    font-size: 12px;
+    border: 1px solid #B0B7D0;
+    border-radius: 2px;
+    height: 38px;
+}
+.inputtextanimation input {
+    padding-left: 12px;
+    transition: 0.5s;
+}
+.form-control {
+    background-color: #FFFFFF;
+    background-image: none;
+    border: 1px solid #e5e6e7;
+    border-radius: 1px;
+    color: inherit;
+    display: block;
+    padding: 6px 10px;
+    transition: border-color 0.15s ease-in-out 0s, box-shadow 0.15s ease-in-out 0s;
+    width: 100%;
+    height: 35px;
+    box-shadow: none;
+}
+.reg-form:hover {
+    box-shadow: 0px 6px 35px -19px #111;
+    transition: 0.5s;
+}
+.reg-form .xlbtn {
+    width: 356px;
+    margin-top: 24px;
+    margin-bottom: 4px;
+    border-radius: 4px;
+}
+.xlbtn {
+    font-size: 14px;
+    color: #fff;
+    background-color: #00ACEA;
+    border: 1px solid #00ACEA;
+    text-transform: unset;
+    font-family: 'OpenSans-Bold';
+    height: 40px;
+    border-radius: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+    padding: 0;
+    line-height: 42px;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+
+.tr-selectbox {
+    height: 35px;
+    width: auto;
+    margin: 0 6px;
+}
+.tr-selectbox {
+    height: 35px;
+    /* margin-top: 21px !important; */
+}
+.tr-selectbox {
+    margin: 0;
+}
+.tr-selectbox .select {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    font-size: 16px;
+    color: #fff;
+    width: 100%;
+    height: 40px;
+}
+.tr-selectbox .select-hidden {
+    padding-right: 10px;
+    border: 1px solid #D9DAE3;
+    text-transform: uppercase;
+    font-size: 12px;
+    padding-top: 8px;
+}
+.tr-selectbox .select-hidden {
+    display: none;
+    visibility: hidden;
+    padding-right: 10px;
+    border: 1px solid #D9DAE3;
+}
+.select-styled {
+    cursor: pointer;
+}
+.tr-selectbox .select-styled {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: #fff;
+    padding: 10px 10px;
+    -moz-transition: all 0.2s ease-in;
+    -o-transition: all 0.2s ease-in;
+    -webkit-transition: all 0.2s ease-in;
+    transition: all 0.2s ease-in;
+    border: 1px solid #B9BAC3;
+    color: #42445D;
+    height: 35px;
+    font-size: 12px;
+    word-break: unset;
+    white-space: pre;
+    overflow: hidden;
+    padding-right: 18px;
+    font-family: Roboto-Regular;
+}
+.tr-selectbox .select-styled {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: #fff;
+    padding: 8px 10px;
+    -moz-transition: all 0.2s ease-in;
+    -o-transition: all 0.2s ease-in;
+    -webkit-transition: all 0.2s ease-in;
+    transition: all 0.2s ease-in;
+    border: 1px solid #D9DAE3;
+    color: #393A54;
+    height: 35px;
+    font-size: 14px;
+    border-radius: 2px;
+}
+.reg-form .select-styled {
+    height: 38px !important;
+    padding-top: 9px !important;
+}
+.tr-selectbox .select-styled:after {
+    width: 29px;
+    height: 32px;
+    border: 7px solid transparent;
+    position: absolute;
+    right: 0px;
+    content: "";
+    text-align: center;
+    line-height: 4px;
+    font-size: 22px;
+    transition: 0.5s;
+    color: #007FDD;
+    background-image: url(https://cdn.toprankers.net/svg/vidu_dashboard_icons/right-nav-arrow-yellow.svg);
+    background-repeat: no-repeat;
+    -webkit-transform: rotate(-180deg);
+    -ms-transform: rotate(-180deg);
+    -o-transform: rotate(-180deg);
+    transform: rotate(-180deg);
+    background-size: contain;
+    top: -3px;
+    background-color: #fff;
+}
+.tr-selectbox .select-styled:after {
+    border: 9px solid transparent;
+    top: 0;
+}
+.reg-form .tr-selectbox .select-styled:after {
+    top: 0px;
+}
+.tr-selectbox .select-options {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    left: 0;
+    z-index: 999;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    overflow: auto;
+    min-width: 150px;
+    max-height: 161px;
+    overflow-x: hidden;
+    word-break: break-all;
+}
+.tr-selectbox .select-options {
+    border: 1px solid #D9DAE3;
+    color: #393A54;
+    border-top: 0;
+    background-color: #fff;
+}
+.tr-selectbox .select-options {
+    min-width: 160px;
+    max-height: 191px;
+}
+.tr-selectbox .select-options {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    left: 0;
+    z-index: 999;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+div.indicate img, .indicate-txt, div.indicate, li {
+    cursor: default;
+    font-weight: bold;
+}
+.tr-selectbox .select-options li {
+    margin: 0;
+    padding: 9px 10px;
+    text-indent: 0;
+    -moz-transition: all 0.15s ease-in;
+    -o-transition: all 0.15s ease-in;
+    -webkit-transition: all 0.15s ease-in;
+    transition: all 0.15s ease-in;
+    border-top: 1px solid #e6e1e1;
+    font-size: 12px;
+    text-align: left;
+    line-height: 14px;
+    word-break: break-all;
+    font-family: Roboto-Regular;
+}
+.tr-selectbox .select-options li {
+    margin: 0;
+    padding: 10px 0 8px 0;
+    text-indent: 10px;
+    -moz-transition: all 0.15s ease-in;
+    -o-transition: all 0.15s ease-in;
+    -webkit-transition: all 0.15s ease-in;
+    transition: all 0.15s ease-in;
+    border-top: 1px solid #e6e1e1;
+    font-size: 14px;
+    font-weight: 100;
+    font-family: 'OpenSans-Light';
+}
+.select-styled {
+    cursor: pointer;
+}
+.tr-selectbox .select-styled {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: #fff;
+    padding: 10px 10px;
+    -moz-transition: all 0.2s ease-in;
+    -o-transition: all 0.2s ease-in;
+    -webkit-transition: all 0.2s ease-in;
+    transition: all 0.2s ease-in;
+    border: 1px solid #B9BAC3;
+    color: #42445D;
+    height: 35px;
+    font-size: 12px;
+    word-break: unset;
+    white-space: pre;
+    overflow: hidden;
+    padding-right: 18px;
+    font-family: Roboto-Regular;
+}
+.tr-selectbox .select-styled {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: #fff;
+    padding: 8px 10px;
+    -moz-transition: all 0.2s ease-in;
+    -o-transition: all 0.2s ease-in;
+    -webkit-transition: all 0.2s ease-in;
+    transition: all 0.2s ease-in;
+    border: 1px solid #D9DAE3;
+    color: #393A54;
+    height: 35px;
+    font-size: 14px;
+    border-radius: 2px;
+}
+.reg-form .select-styled {
+    height: 38px !important;
+    padding-top: 9px !important;
+}
+.tr-selectbox .select-styled:after {
+    width: 29px;
+    height: 32px;
+    border: 7px solid transparent;
+    position: absolute;
+    right: 0px;
+    content: "";
+    text-align: center;
+    line-height: 4px;
+    font-size: 22px;
+    transition: 0.5s;
+    color: #007FDD;
+    background-image: url(https://cdn.toprankers.net/svg/vidu_dashboard_icons/right-nav-arrow-yellow.svg);
+    background-repeat: no-repeat;
+    -webkit-transform: rotate(-180deg);
+    -ms-transform: rotate(-180deg);
+    -o-transform: rotate(-180deg);
+    transform: rotate(-180deg);
+    background-size: contain;
+    top: -3px;
+    background-color: #fff;
+}
+.tr-selectbox .select-styled:after {
+    border: 9px solid transparent;
+    top: 0;
+}
+.reg-form .tr-selectbox .select-styled:after {
+    top: 0px;
+}
+.tr-selectbox .select-options {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    left: 0;
+    z-index: 999;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    overflow: auto;
+    min-width: 150px;
+    max-height: 161px;
+    overflow-x: hidden;
+    word-break: break-all;
+}
+.tr-selectbox .select-options {
+    border: 1px solid #D9DAE3;
+    color: #393A54;
+    border-top: 0;
+    background-color: #fff;
+}
+.tr-selectbox .select-options {
+    min-width: 160px;
+    max-height: 191px;
+}
+.tr-selectbox .select-options {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    left: 0;
+    z-index: 999;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.tr-selectbox .select-options {
+    border: 1px solid #D9DAE3;
+    color: #393A54;
+    border-top: 0;
+    background-color: #fff;
+}
+.tr-selectbox .select-options {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    left: 0;
+    z-index: 999;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    overflow: auto;
+    min-width: 150px;
+    max-height: 161px;
+    overflow-x: hidden;
+    word-break: break-all;
+}
+.tr-selectbox .select-options {
+    border: 1px solid #D9DAE3;
+    color: #393A54;
+    border-top: 0;
+    background-color: #fff;
+}
+.tr-selectbox .select-options {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    left: 0;
+    z-index: 999;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.tr-selectbox .select-options li {
+    margin: 0;
+    padding: 9px 10px;
+    text-indent: 0;
+    -moz-transition: all 0.15s ease-in;
+    -o-transition: all 0.15s ease-in;
+    -webkit-transition: all 0.15s ease-in;
+    transition: all 0.15s ease-in;
+    border-top: 1px solid #e6e1e1;
+    font-size: 12px;
+    text-align: left;
+    line-height: 14px;
+    word-break: break-all;
+    font-family: Roboto-Regular;
+}
+.tr-selectbox .select-options li {
+    margin: 0;
+    padding: 10px 0 8px 0;
+    text-indent: 10px;
+    -moz-transition: all 0.15s ease-in;
+    -o-transition: all 0.15s ease-in;
+    -webkit-transition: all 0.15s ease-in;
+    transition: all 0.15s ease-in;
+    border-top: 1px solid #e6e1e1;
+    font-size: 14px;
+    font-weight: 100;
+    font-family: 'OpenSans-Light';
+}
+.tr-selectbox .select {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    font-size: 16px;
+    color: #fff;
+    width: 100%;
+    height: 40px;
+}
+.tr-selectbox .select {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    font-size: 16px;
+    color: #fff;
+    width: 100%;
+    height: 40px;
+}
+.select-styled {
+    cursor: pointer;
+}
+.tr-selectbox .select-styled {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: #fff;
+    padding: 10px 10px;
+    -moz-transition: all 0.2s ease-in;
+    -o-transition: all 0.2s ease-in;
+    -webkit-transition: all 0.2s ease-in;
+    transition: all 0.2s ease-in;
+    border: 1px solid #B9BAC3;
+    color: #42445D;
+    height: 35px;
+    font-size: 12px;
+    word-break: unset;
+    white-space: pre;
+    overflow: hidden;
+    padding-right: 18px;
+    font-family: Roboto-Regular;
+}
+.tr-selectbox .select-styled {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: #fff;
+    padding: 8px 10px;
+    -moz-transition: all 0.2s ease-in;
+    -o-transition: all 0.2s ease-in;
+    -webkit-transition: all 0.2s ease-in;
+    transition: all 0.2s ease-in;
+    border: 1px solid #D9DAE3;
+    color: #393A54;
+    height: 35px;
+    font-size: 14px;
+    border-radius: 2px;
+}
+.reg-form .select-styled {
+    height: 38px !important;
+    padding-top: 9px !important;
+}
+.questiontextbox_div{
+    width:100%;
+}
+.questiontextbox_div > textarea{
+    width:100%;
+    font-size: 12px;
+    border: 1px solid #B0B7D0;
+    border-radius: 2px;
+}
+.option_css, .answer_css{
+   width:100%;
+}
+
+.xlbtn {
+    font-size: 14px;
+    color: #fff;
+    background-color: #00ACEA;
+    border: 1px solid #00ACEA;
+    text-transform: unset;
+    font-family: 'OpenSans-Bold';
+    height: 40px;
+    border-radius: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+    padding: 0;
+    line-height: 42px;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+.reg-form .xlbtn {
+    width: 356px;
+    margin-top: 24px;
+    margin-bottom: 4px;
+    border-radius: 4px;
+}
+
+.demo-title{
+    text-align: center;
+}
