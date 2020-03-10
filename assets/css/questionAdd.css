@@ -534,6 +534,37 @@ div.indicate img, .indicate-txt, div.indicate, li {
     border: 1px solid #B0B7D0;
     border-radius: 2px;
 }
-.option_css,answer_css{
-   width:100%
+.option_css, .answer_css{
+   width:100%;
+}
+
+.xlbtn {
+    font-size: 14px;
+    color: #fff;
+    background-color: #00ACEA;
+    border: 1px solid #00ACEA;
+    text-transform: unset;
+    font-family: 'OpenSans-Bold';
+    height: 40px;
+    border-radius: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+    padding: 0;
+    line-height: 42px;
+    margin: 0 auto;
+    margin-top: 20px;
+    background-image: none;
+}
+
+.reg-form .xlbtn {
+    width: 356px;
+    margin-top: 24px;
+    margin-bottom: 4px;
+    border-radius: 4px;
+}
+
+.demo-title{
+    text-align: center;
 }

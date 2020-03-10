@@ -2,16 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0de834da-5e0f-4194-ba1b-1cfedf38b1d8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Screenshots/Screenshot (95).png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Screenshots/Screenshot (96).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Screenshots/Screenshot (100).png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Static_content/css/questionAdd.css" beforeDir="false" afterPath="$PROJECT_DIR$/Static_content/css/questionAdd.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Static_content/css/taketest.css" beforeDir="false" afterPath="$PROJECT_DIR$/Static_content/css/taketest.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Static_content/js/questionAdd.js" beforeDir="false" afterPath="$PROJECT_DIR$/Static_content/js/questionAdd.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Static_content/css/subject.css" beforeDir="false" afterPath="$PROJECT_DIR$/Static_content/css/subject.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/css/questionAdd.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/questionAdd.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/css/taketest.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/taketest.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/questionAdd.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/questionAdd.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/taketest.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/taketest.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/css/subject.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/subject.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/js/questionAdd.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/questionAdd.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/subject.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/subject.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -33,20 +32,38 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Static_content/css/questionAdd.css">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Static_content/css/subject.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="317">
-              <caret line="565" column="11" selection-start-line="565" selection-start-column="11" selection-end-line="565" selection-end-column="11" />
+            <state relative-caret-position="334">
+              <caret line="110" column="1" selection-start-line="110" selection-start-column="1" selection-end-line="110" selection-end-column="1" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/questionAdd.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="72">
-              <caret line="172" selection-start-line="172" selection-end-line="174" selection-end-column="34" />
+            <state relative-caret-position="106">
+              <caret line="168" column="24" selection-start-line="168" selection-start-column="24" selection-end-line="175" selection-end-column="30" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/subject.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="646">
+              <caret line="38" column="77" selection-start-line="38" selection-start-column="77" selection-end-line="38" selection-end-column="77" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/base.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="202">
+              <caret line="16" column="31" selection-start-line="16" selection-start-column="31" selection-end-line="16" selection-end-column="31" />
             </state>
           </provider>
         </entry>
@@ -71,15 +88,6 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Static_content/js/common/jquery-3.2.1.min.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Static_content/js/questionAdd.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="102">
@@ -89,25 +97,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Testtakers/urls.py">
+        <entry file="file://$PROJECT_DIR$/Static_content/css/questionAdd.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="259">
-              <caret line="22" column="20" selection-start-line="22" selection-start-column="20" selection-end-line="22" selection-end-column="20" />
-              <folding>
-                <element signature="e#634#666#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/testsetup/urls.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="191">
-              <caret line="24" column="24" selection-start-line="24" selection-start-column="24" selection-end-line="24" selection-end-column="24" />
-              <folding>
-                <element signature="e#634#666#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="208">
+              <caret line="563" column="2" lean-forward="true" selection-start-line="563" selection-start-column="2" selection-end-line="563" selection-end-column="2" />
             </state>
           </provider>
         </entry>
@@ -163,10 +156,8 @@
         <option value="$PROJECT_DIR$/testsetup/migrations/0002_auto_20200207_0758.py" />
         <option value="$PROJECT_DIR$/Testtakers/urls.py" />
         <option value="$PROJECT_DIR$/requests/requestactions/user.py" />
-        <option value="$PROJECT_DIR$/templates/subject.html" />
         <option value="$PROJECT_DIR$/assets/js/subject.js" />
         <option value="$PROJECT_DIR$/accounts/views.py" />
-        <option value="$PROJECT_DIR$/templates/base.html" />
         <option value="$PROJECT_DIR$/Static_content/js/subject.js" />
         <option value="$PROJECT_DIR$/Static_content/js/testselection.js" />
         <option value="$PROJECT_DIR$/testsetup/urls.py" />
@@ -186,10 +177,13 @@
         <option value="$PROJECT_DIR$/Static_content/js/taketest.js" />
         <option value="$PROJECT_DIR$/templates/taketest.html" />
         <option value="$PROJECT_DIR$/Static_content/css/taketest.css" />
-        <option value="$PROJECT_DIR$/Static_content/css/questionAdd.css" />
         <option value="$PROJECT_DIR$/Static_content/js/questionAdd.js" />
         <option value="$PROJECT_DIR$/testsetup/views.py" />
         <option value="$PROJECT_DIR$/templates/questionAdd.html" />
+        <option value="$PROJECT_DIR$/templates/subject.html" />
+        <option value="$PROJECT_DIR$/Static_content/css/questionAdd.css" />
+        <option value="$PROJECT_DIR$/templates/base.html" />
+        <option value="$PROJECT_DIR$/Static_content/css/subject.css" />
       </list>
     </option>
   </component>
@@ -215,7 +209,7 @@
             <path>
               <item name="Django_Project" type="b2602c69:ProjectViewProjectNode" />
               <item name="Django_Project" type="462c0819:PsiDirectoryNode" />
-              <item name="testsetup" type="462c0819:PsiDirectoryNode" />
+              <item name="Screenshots" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -231,10 +225,10 @@
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\Projects\Django_Project\Screenshots" />
+      <recent name="D:\Projects\Django_Project" />
       <recent name="D:\Projects\Django_Project\Static_content\landingpage" />
       <recent name="D:\Projects\Django_Project\Static_content\login" />
       <recent name="D:\Projects\Django_Project\Static_content\login\css" />
-      <recent name="D:\Projects\Django_Project\Static_content" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\Projects\Django_Project\Static_content\login" />
@@ -270,7 +264,7 @@
     <frame x="-8" y="-8" width="1382" height="784" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -281,7 +275,7 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="8" visible="true" weight="0.32872504" />
+      <window_info anchor="bottom" id="Terminal" order="8" visible="true" weight="0.32872504" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
       <window_info anchor="bottom" id="Python Console" order="10" weight="0.32872504" />
       <window_info anchor="bottom" id="Messages" order="11" />
@@ -291,13 +285,6 @@
     </layout>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/accounts/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" selection-start-line="1" selection-end-line="1" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Static_content/js/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
@@ -316,13 +303,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
           <caret line="14" column="10" lean-forward="true" selection-start-line="14" selection-start-column="10" selection-end-line="14" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/base.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="321">
-          <caret line="23" column="4" selection-start-line="23" selection-start-column="4" selection-end-line="23" selection-end-column="4" />
         </state>
       </provider>
     </entry>
@@ -527,13 +507,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/subject.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="25" lean-forward="true" selection-start-line="25" selection-end-line="25" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Static_content/js/taketest.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
@@ -579,13 +552,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Static_content/css/questionAdd.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="317">
-          <caret line="565" column="11" selection-start-line="565" selection-start-column="11" selection-end-line="565" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Static_content/js/common/jquery-3.2.1.min.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
@@ -606,6 +572,34 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Static_content/js/questionAdd.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="22" column="41" selection-start-line="22" selection-start-column="41" selection-end-line="22" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/questionAdd.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="106">
+          <caret line="168" column="24" selection-start-line="168" selection-start-column="24" selection-end-line="175" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/subject.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="646">
+          <caret line="38" column="77" selection-start-line="38" selection-start-column="77" selection-end-line="38" selection-end-column="77" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="202">
+          <caret line="16" column="31" selection-start-line="16" selection-start-column="31" selection-end-line="16" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/testsetup/views.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
@@ -616,17 +610,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Static_content/js/questionAdd.js">
+    <entry file="file://$PROJECT_DIR$/Static_content/css/questionAdd.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="22" column="41" selection-start-line="22" selection-start-column="41" selection-end-line="22" selection-end-column="41" />
+        <state relative-caret-position="208">
+          <caret line="563" column="2" lean-forward="true" selection-start-line="563" selection-start-column="2" selection-end-line="563" selection-end-column="2" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/questionAdd.html">
+    <entry file="file://$PROJECT_DIR$/Static_content/css/subject.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="172" selection-start-line="172" selection-end-line="174" selection-end-column="34" />
+        <state relative-caret-position="334">
+          <caret line="110" column="1" selection-start-line="110" selection-start-column="1" selection-end-line="110" selection-end-column="1" />
         </state>
       </provider>
     </entry>

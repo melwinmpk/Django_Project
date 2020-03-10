@@ -555,7 +555,9 @@ div.indicate img, .indicate-txt, div.indicate, li {
     line-height: 42px;
     margin: 0 auto;
     margin-top: 20px;
+    background-image: none;
 }
+
 .reg-form .xlbtn {
     width: 356px;
     margin-top: 24px;
