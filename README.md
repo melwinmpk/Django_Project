@@ -1,6 +1,9 @@
 # Django_Project (TestTakers)
   Test Takers is a web site for the students to take the test and get to know about their marks. Teachers can login and create new subjects and add Questions to it.(Developed in Django)
 <div>
+    <h2>Screenshots and Link</h2>
+    <h3>Link = https://github.com/melwinmpk/Django_Project/blob/master/Screenshorts.md</h3>
+    <h3>Link = https://testtakersweb.herokuapp.com/</h3>
     <h2>Buisness Logic</h2>
     <h3>Students Work Flow</h3>
       <ul>
